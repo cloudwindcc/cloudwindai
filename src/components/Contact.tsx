@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
         </form>
         <p className="text-center text-gray-400 mt-6">
           您也可以通过以下方式联系我们：<br />
-          邮箱: contact@cloudwindai.com<br />
+          邮箱: CEO@cloudwindai.com<br />
           网址：CloudWindAI.com
         </p>
       </div>
