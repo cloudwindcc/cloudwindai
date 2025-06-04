@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 export const Navigation: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,12 +31,15 @@ export const Navigation: React.FC = () => {
   return (
     <nav className="p-4 shadow-lg fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: 'rgba(10, 15, 31, 0.85)', backdropFilter: 'blur(10px)' }}>
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="company-logo-container flex flex-col items-center">
-          <div className="text-lg md:text-xl font-bold text-sky-400" style={{ fontFamily: '"STFangsong", "FangSong", "仿宋", "Noto Sans SC", "Inter", sans-serif' }}>
-            雲風智能有限公司
-          </div>
-          <div className="text-xs md:text-sm text-gray-300 font-sans mt-0.5"> 
-            CloudWind AI Limited
+        <a href="#" className="company-logo-container flex items-center"> {/* Modified: flex-col items-center to flex items-center */}
+          <img src={logo} alt="CloudWind AI Logo" className="h-10 w-10 mr-3" /> {/* Added: logo image and margin */}
+          <div> {/* Added: wrapper div for text */}
+            <div className="text-lg md:text-xl font-bold text-sky-400" style={{ fontFamily: '"STFangsong", "FangSong", "仿宋", "Noto Sans SC", "Inter", sans-serif' }}>
+              雲風智能有限公司
+            </div>
+            <div className="text-xs md:text-sm text-gray-300 font-sans mt-0.5">
+              CloudWind AI Limited
+            </div>
           </div>
         </a>
         <div className="space-x-4 text-lg hidden md:block">
