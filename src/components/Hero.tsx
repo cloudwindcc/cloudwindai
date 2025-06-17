@@ -16,10 +16,10 @@ export const Hero: React.FC = () => {
       marginTop: '60px' // Account for fixed navbar
     }}>
       <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-        <span className="text-sky-400">雲風智能</span> <span className="text-gray-200">赋能未来</span>
+        <span className="text-sky-400">雲風智能</span> <span className="text-gray-200">赋能選擇</span>
       </h1>
       <p className="text-xl md:text-2xl text-gray-300 max-w-3xl">
-        AI赋能个人和组织，做更对的选择，做更好的决策。
+        AI賦能個人與組織，做更對的選擇，做更好的決策。
       </p>
     </section>
   );
