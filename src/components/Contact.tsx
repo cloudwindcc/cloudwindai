@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
       marginTop: '2rem',
       marginBottom: '2rem'
     }}>
-      <h2 className="text-4xl font-bold text-center mb-12 text-sky-300">联系我们</h2>
+      <h2 className="text-4xl font-bold text-center mb-12 text-sky-300">聯繫我們</h2>
       <div className="max-w-lg mx-auto card p-8 rounded-lg shadow-xl" style={{
         backgroundColor: 'rgba(17, 24, 39, 0.85)',
         backdropFilter: 'blur(8px)',
@@ -56,12 +56,12 @@ export const Contact: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               className="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 placeholder-gray-400" 
-              placeholder="请输入您的姓名" 
+              placeholder="請輸入您的姓名" 
               required 
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-300">您的邮箱</label>
+            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-300">您的郵箱</label>
             <input 
               type="email" 
               id="email" 
@@ -82,7 +82,7 @@ export const Contact: React.FC = () => {
               onChange={handleChange}
               rows={4} 
               className="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 placeholder-gray-400" 
-              placeholder="请在此处输入您的咨询内容..." 
+              placeholder="請在此處輸入您的諮詢內容..." 
               required
             ></textarea>
           </div>
@@ -93,13 +93,13 @@ export const Contact: React.FC = () => {
             onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1d4ed8'}
             onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2563eb'}
           >
-            发送消息
+            發送消息
           </button>
         </form>
         <p className="text-center text-gray-400 mt-6">
-          您也可以通过以下方式联系我们：<br />
-          邮箱: CEO@cloudwindai.com<br />
-          网址：CloudWindAI.com
+          您也可以通過以下方式聯繫我們：<br />
+          郵箱: <a href="mailto:CEO@cloudwindai.com" className="text-sky-300 hover:underline">CEO@cloudwindai.com</a><br />
+          網址：CloudWindAI.com
         </p>
       </div>
     </section>
