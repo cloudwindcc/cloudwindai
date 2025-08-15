@@ -5,8 +5,9 @@ import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
+import { Testimonials } from './components/Testimonials';
 import { ParticleNetwork } from './components/ParticleNetwork';
-import { BPPage } from './components/BPPage'; // Import the new BPPage component
+import { BPPage } from './components/BPPage';
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
               <Hero />
               <Services />
               <About />
+              <Testimonials />
               <Contact />
             </Layout>
           } />
-          <Route path="/bp" element={<BPPage />} /> {/* New route for BPPage */}
+          <Route path="/bp" element={<BPPage />} />
         </Routes>
       </div>
     </Router>
