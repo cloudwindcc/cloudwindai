@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
         </form>
         <p className="text-center text-gray-400 mt-6">
           您也可以通過以下方式聯繫我們：<br />
-          地址：香港觀塘敬業街59號<br />
+          地址：香港数码港<br />
           郵箱: <a href="mailto:CEO@cloudwindai.com" className="text-sky-300 hover:underline">CEO@cloudwindai.com</a><br />
           網址：CloudWindAI.com
                   </p>

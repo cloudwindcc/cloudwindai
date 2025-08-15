@@ -50,6 +50,9 @@ export const Navigation: React.FC = () => {
           <a href="#contact" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#contact')}>聯絡方式</a>
 
        <Link to="/bp" className="hover:text-sky-400 transition-colors">商業計劃書</Link> {/* Use Link for BP */}
+          <Link to="/en" className="bg-sky-600 hover:bg-sky-700 text-white px-3 py-1 rounded-md text-sm transition-colors">
+            EN
+          </Link>
         </div>
         <div className="md:hidden">
           <button
@@ -67,6 +70,9 @@ export const Navigation: React.FC = () => {
         <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#contact')}>聯絡方式</a>
 
        <Link to="/bp" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>商業計劃書</Link> {/* Use Link for BP */}
+        <Link to="/en" className="block px-4 py-2 text-white hover:bg-gray-700 bg-sky-600" onClick={() => setMobileMenuOpen(false)}>
+          EN 版本
+        </Link>
       </div>
     </nav>
   );
