@@ -98,8 +98,8 @@ export const ContactEN: React.FC = () => {
         </form>
         <p className="text-center text-gray-400 mt-6">
           You can also contact us through:<br />
-          Address: 59 King Yip Street, Kwun Tong, Hong Kong<br />
-          Email: <a href="mailto:CEO@cloudwindai.com" className="text-sky-300 hover:underline">CEO@cloudwindai.com</a><br />
+          Address: Unit 405-414，Level 4 Core E, CypberPort 3, Hong Kong<br />
+          Email: <a href="mailto:info@cloudwindai.com" className="text-sky-300 hover:underline">info@cloudwindai.com</a><br />
           Website: CloudWindAI.com
         </p>
       </div>
