@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
         </form>
         <p className="text-center text-gray-400 mt-6">
           您也可以通過以下方式聯繫我們：<br />
-          地址：Unit 405-414，Level 4 Core E, CypberPort 3<br />
+          地址：香港數碼港，Unit 405-414，Level 4 Core E, CypberPort 3<br />
           郵箱: <a href="mailto:info@cloudwindai.com" className="text-sky-300 hover:underline">info@cloudwindai.com</a><br />
           網址：CloudWindAI.com
                   </p>
