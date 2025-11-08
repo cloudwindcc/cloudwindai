@@ -9,7 +9,7 @@ export const About: React.FC = () => {
   ];
 
   const team = [
-    { name: "Kevin", role: "CEO & 创始人", expertise: "AI战略、商业咨询", avatar: "K" },
+    { name: "William", role: "CEO & 创始人", expertise: "AI战略、商业咨询", avatar: "K" },
     { name: "Edward", role: "CTO & 技术总监", expertise: "AI架构、产品开发", avatar: "E" },
     { name: "Mary", role: "CMO & 市场总监", expertise: "品牌建设、客户增长", avatar: "M" }
   ];
