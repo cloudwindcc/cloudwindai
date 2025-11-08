@@ -123,8 +123,8 @@ npm run lint
 - **部署**: GitHub Actions CI/CD自动化
 
 ### 🔗 **联系方式更新**
-- **邮箱**: Kevin@cloudwindai.com ✅
-- **CTO**: Edward (原Yifan) ✅
+- **邮箱**: info@cloudwindai.com ✅
+- **CTO**: Edward ✅
 
 ### 🚀 **立即可用**
 项目现已完全优化，支持一键部署到：
