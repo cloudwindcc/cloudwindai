@@ -438,8 +438,8 @@ export const BPPage: React.FC = () => {
 
                         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
-                                <img src="" alt="CEO Kevin" className="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-white object-cover" />
-                                <h4 className="text-xl font-bold">Kevin</h4>
+                                <img src="" alt="CEO William" className="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-white object-cover" />
+                                <h4 className="text-xl font-bold">William</h4>
                                 <p className="text-sky-800 font-semibold mb-2">首席執行官 (CEO)</p>
                                 <p className="text-gray-600">負責公司總體戰略、市場方向、關鍵客戶關係及融資活動。</p>
                             </div>
@@ -466,7 +466,7 @@ export const BPPage: React.FC = () => {
                     <h3 className="text-3xl font-bold mb-4">成為雲風智能的合作夥伴</h3>
                     <p className="max-w-2xl mx-auto mb-8 text-gray-300">我們正在尋找志同道合的基石投資者，與我們一同把握AI時代的巨大機遇，共創價值。</p>
                     <div className="bg-gray-700 p-8 rounded-lg inline-block">
-                        <p className="text-lg">聯繫人: CEO - Kevin</p>
+                        <p className="text-lg">聯繫人: CEO - William</p>
                         <p className="text-lg">郵箱: ceo@cloudwindai.com</p>
                         <p className="text-sm mt-4 text-gray-400">&copy; 2025 雲風智能有限公司 (CloudWind AI Limited). All Rights Reserved.</p>
                     </div>
