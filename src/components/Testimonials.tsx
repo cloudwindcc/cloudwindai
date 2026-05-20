@@ -42,7 +42,7 @@ export const Testimonials: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap=8">
+      <div className="grid md:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-gradient-to-br from-sky-900/20 to-purple-900/20 p-6 rounded-xl border border-sky-500/20">
             <div className="mb-4">
