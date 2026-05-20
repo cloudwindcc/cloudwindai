@@ -9,9 +9,9 @@ export const About: React.FC = () => {
   ];
 
   const team = [
-    { name: "William", role: "CEO & 创始人", expertise: "AI战略、商业咨询", avatar: "K" },
-    { name: "Edward", role: "CTO & 技术总监", expertise: "AI架构、产品开发", avatar: "E" },
-    { name: "Mary", role: "CMO & 市场总监", expertise: "品牌建设、客户增长", avatar: "M" }
+    { role: "战略与执行负责人", expertise: "负责公司战略、商业咨询、客户关系与融资推进", avatar: "01" },
+    { role: "技术与AI架构负责人", expertise: "负责AI架构、产品开发、技术路线与交付质量", avatar: "02" },
+    { role: "市场与增长负责人", expertise: "负责品牌建设、市场拓展、客户增长与渠道合作", avatar: "03" }
   ];
 
   return (
@@ -28,8 +28,8 @@ export const About: React.FC = () => {
     }}>
       
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-sky-300">关于雲風智能</h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-300">关于雲風智能</h2>
+        <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
           香港领先的AI解决方案提供商，专注为传统企业数字化转型赋能
         </p>
       </div>
@@ -38,7 +38,7 @@ export const About: React.FC = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         {stats.map((stat, index) => (
           <div key={index} className="text-center p-6 bg-sky-900/20 rounded-lg border border-sky-500/20">
-            <div className="text-3xl font-bold text-sky-400 mb-2">{stat.value}</div>
+            <div className="text-2xl md:text-3xl font-bold text-sky-400 mb-2">{stat.value}</div>
             <div className="text-sm text-sky-300 mb-1">{stat.label}</div>
             <div className="text-xs text-gray-400">{stat.desc}</div>
           </div>
@@ -48,20 +48,20 @@ export const About: React.FC = () => {
       {/* 公司介绍 */}
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <div className="bg-gray-800/50 p-8 rounded-xl">
-          <h3 className="text-2xl font-bold text-sky-400 mb-4">🎯 我们的使命</h3>
-          <p className="text-gray-300 leading-relaxed mb-4">
+          <h3 className="text-xl md:text-2xl font-bold text-sky-400 mb-4">我们的使命</h3>
+          <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-4">
             雲風智能有限公司（CloudWind AI Limited）成立于香港，专注为传统企业提供AI降本增效解决方案。
             我们相信AI技术能够帮助企业洞察复杂性，做出更明智的决策，在关键决策点选择正确方向。
           </p>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-sm md:text-base text-gray-300 leading-relaxed">
             通过30天标准交付流程，我们已为50+企业实现数字化转型，平均ROI超过300%，
             成为香港地区最受信赖的AI解决方案提供商。
           </p>
         </div>
 
         <div className="bg-gray-800/50 p-8 rounded-xl">
-          <h3 className="text-2xl font-bold text-sky-400 mb-4">🏆 核心优势</h3>
-          <ul className="space-y-3 text-gray-300">
+          <h3 className="text-xl md:text-2xl font-bold text-sky-400 mb-4">核心优势</h3>
+          <ul className="space-y-3 text-sm md:text-base text-gray-300">
             <li className="flex items-start">
               <span className="text-sky-400 mr-2">•</span>
               <span><strong>行业专家：</strong>团队来自顶尖AI公司和咨询机构</span>
@@ -84,16 +84,15 @@ export const About: React.FC = () => {
 
       {/* 创始团队 */}
       <div className="bg-gradient-to-r from-sky-900/30 to-purple-900/30 p-8 rounded-xl">
-        <h3 className="text-2xl font-bold text-center mb-8 text-sky-300">💎 钻石组合创始团队</h3>
+        <h3 className="text-xl md:text-2xl font-bold text-center mb-8 text-sky-300">核心团队分工</h3>
         <div className="grid md:grid-cols-3 gap-6">
           {team.map((member, index) => (
             <div key={index} className="text-center p-6 bg-gray-800/50 rounded-lg">
-              <div className="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">
+              <div className="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-xl font-bold text-white mx-auto mb-4">
                 {member.avatar}
               </div>
-              <h4 className="text-lg font-bold text-sky-400">{member.name}</h4>
-              <p className="text-sm text-sky-300 mb-2">{member.role}</p>
-              <p className="text-xs text-gray-400">{member.expertise}</p>
+              <h4 className="text-base font-bold text-sky-400 mb-2">{member.role}</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">{member.expertise}</p>
             </div>
           ))}
         </div>
@@ -101,18 +100,18 @@ export const About: React.FC = () => {
 
       {/* 客户见证 */}
       <div className="mt-12 bg-gradient-to-r from-green-900/20 to-blue-900/20 p-8 rounded-xl">
-        <h3 className="text-2xl font-bold text-center mb-6 text-green-300">📈 客户成功案例</h3>
+        <h3 className="text-xl md:text-2xl font-bold text-center mb-6 text-green-300">客户成功案例</h3>
         <div className="grid md:grid-cols-3 gap-6 text-center">
           <div>
-            <div className="text-2xl font-bold text-green-400">零售行业</div>
+            <div className="text-xl font-bold text-green-400">零售行业</div>
             <div className="text-sm text-gray-300">某连锁超市AI客服上线后，人力成本降低45%</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-blue-400">制造行业</div>
+            <div className="text-xl font-bold text-blue-400">制造行业</div>
             <div className="text-sm text-gray-300">某工厂AI质检系统，次品率下降60%</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-purple-400">金融行业</div>
+            <div className="text-xl font-bold text-purple-400">金融行业</div>
             <div className="text-sm text-gray-300">某银行AI风控模型，坏账率降低35%</div>
           </div>
         </div>

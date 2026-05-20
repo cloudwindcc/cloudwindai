@@ -1,13 +1,13 @@
+/* Import Noto Sans HK font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import Noto Sans HK font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700&display=swap');
-
 body {
   font-family: 'Noto Sans HK', sans-serif;
-  /* Ensure background color is consistent with BP page */
+  /* Keep the global background consistent across the site */
   background-image: url('https://cdn-hsyq-static-bak.shanhutech.cn/bizhi/staticwp/201712/7e0d7cd866c7be1dd1ada4d21b5e204e.jpg');
   background-size: cover;
   background-position: center center;
@@ -19,7 +19,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Custom text gradient for titles, matching bp.html's original style */
+/* Custom text gradient for titles */
 .text-gradient {
     background-clip: text;
     -webkit-background-clip: text;
@@ -27,7 +27,7 @@ body {
     background-image: linear-gradient(to right, #0c4a6e, #0c4a6e); /* This is essentially a solid dark blue */
 }
 
-/* Chart container styles from bp.html */
+/* Chart container styles */
 .chart-container {
     position: relative;
     width: 100%;

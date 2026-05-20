@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { LayoutEN } from './components/LayoutEN';
 import { Hero } from './components/Hero';
@@ -13,11 +13,10 @@ import { AboutEN } from './components/AboutEN';
 import { ContactEN } from './components/ContactEN';
 import { TestimonialsEN } from './components/TestimonialsEN';
 import { ParticleNetwork } from './components/ParticleNetwork';
-import { BPPage } from './components/BPPage';
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
       <div className="relative">
         <ParticleNetwork />
         <Routes>
@@ -43,8 +42,7 @@ function App() {
             </LayoutEN>
           } />
           
-          {/* Business Plan (shared between languages) */}
-          <Route path="/bp" element={<BPPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>

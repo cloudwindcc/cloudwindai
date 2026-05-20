@@ -40,7 +40,7 @@ export const ContactEN: React.FC = () => {
       marginTop: '2rem',
       marginBottom: '2rem'
     }}>
-      <h2 className="text-4xl font-bold text-center mb-12 text-sky-300">Contact Us</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-sky-300">Contact Us</h2>
       <div className="max-w-lg mx-auto card p-8 rounded-lg shadow-xl" style={{
         backgroundColor: 'rgba(17, 24, 39, 0.85)',
         backdropFilter: 'blur(8px)',
@@ -96,7 +96,7 @@ export const ContactEN: React.FC = () => {
             Send Message
           </button>
         </form>
-        <p className="text-center text-gray-400 mt-6">
+        <p className="text-center text-sm md:text-base text-gray-400 mt-6 leading-relaxed">
           You can also contact us through:<br />
           Address: Unit 405-414，Level 4 Core E, CypberPort 3, Hong Kong<br />
           Email: <a href="mailto:info@cloudwindai.com" className="text-sky-300 hover:underline">info@cloudwindai.com</a><br />

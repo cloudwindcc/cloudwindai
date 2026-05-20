@@ -43,12 +43,11 @@ export const NavigationEN: React.FC = () => {
             AI Solutions Provider
           </div>
         </Link>
-        <div className="space-x-4 text-lg hidden md:block">
+        <div className="space-x-5 text-base hidden md:block">
           <Link to="/en" className="hover:text-sky-400 transition-colors">Home</Link> {/* Use Link */}
           <a href="#services" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#services')}>Services</a>
           <a href="#about" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#about')}>About Us</a>
           <a href="#contact" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#contact')}>Contact</a>
-          <Link to="/bp" className="hover:text-sky-400 transition-colors">Business Plan</Link> {/* Use Link for BP */}
           <Link to="/" className="bg-sky-600 hover:bg-sky-700 text-white px-3 py-1 rounded-md text-sm transition-colors">
             中文
           </Link>
@@ -67,7 +66,6 @@ export const NavigationEN: React.FC = () => {
         <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#services')}>Services</a>
         <a href="#about" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#about')}>About Us</a>
         <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#contact')}>Contact</a>
-        <Link to="/bp" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>Business Plan</Link> {/* Use Link for BP */}
         <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-700 bg-sky-600" onClick={() => setMobileMenuOpen(false)}>
           中文版本
         </Link>

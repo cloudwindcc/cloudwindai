@@ -36,8 +36,8 @@ export const TestimonialsEN: React.FC = () => {
     }}>
       
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-sky-300">Customer Success Stories</h2>
-        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-300">Customer Success Stories</h2>
+        <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
           50+ enterprises have chosen CloudWind AI, with average ROI exceeding 300%
         </p>
       </div>
@@ -46,8 +46,8 @@ export const TestimonialsEN: React.FC = () => {
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-gradient-to-br from-sky-900/20 to-purple-900/20 p-6 rounded-xl border border-sky-500/20">
             <div className="mb-4">
-              <div className="text-4xl text-sky-400 mb-2">"</div>
-              <p className="text-gray-300 leading-relaxed mb-4">{testimonial.content}</p>
+              <div className="text-3xl text-sky-400 mb-2">"</div>
+              <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-4">{testimonial.content}</p>
             </div>
             
             <div className="border-t border-sky-500/20 pt-4">
@@ -62,15 +62,15 @@ export const TestimonialsEN: React.FC = () => {
       <div className="text-center mt-12">
         <div className="inline-flex flex-wrap justify-center gap-8 text-center">
           <div className="bg-green-900/20 p-4 rounded-lg">
-            <div className="text-2xl font-bold text-green-400">98%</div>
+            <div className="text-xl md:text-2xl font-bold text-green-400">98%</div>
             <div className="text-sm text-gray-300">Customer Satisfaction</div>
           </div>
           <div className="bg-blue-900/20 p-4 rounded-lg">
-            <div className="text-2xl font-bold text-blue-400">300%+</div>
+            <div className="text-xl md:text-2xl font-bold text-blue-400">300%+</div>
             <div className="text-sm text-gray-300">Average Return on Investment</div>
           </div>
           <div className="bg-purple-900/20 p-4 rounded-lg">
-            <div className="text-2xl font-bold text-purple-400">50+</div>
+            <div className="text-xl md:text-2xl font-bold text-purple-400">50+</div>
             <div className="text-sm text-gray-300">Success Cases</div>
           </div>
         </div>

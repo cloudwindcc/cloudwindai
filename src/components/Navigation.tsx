@@ -43,13 +43,11 @@ export const Navigation: React.FC = () => {
             CloudWind AI Limited
           </div>
         </Link>
-        <div className="space-x-4 text-lg hidden md:block">
+        <div className="space-x-5 text-base hidden md:block">
           <Link to="/" className="hover:text-sky-400 transition-colors">首頁</Link> {/* Use Link */}
           <a href="#services" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#services')}>服務</a>
           <a href="#about" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#about')}>關於我們</a>
           <a href="#contact" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#contact')}>聯絡方式</a>
-
-       <Link to="/bp" className="hover:text-sky-400 transition-colors">商業計劃書</Link> {/* Use Link for BP */}
           <Link to="/en" className="bg-sky-600 hover:bg-sky-700 text-white px-3 py-1 rounded-md text-sm transition-colors">
             EN
           </Link>
@@ -68,8 +66,6 @@ export const Navigation: React.FC = () => {
         <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#services')}>服務</a>
         <a href="#about" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#about')}>關於我們</a>
         <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#contact')}>聯絡方式</a>
-
-       <Link to="/bp" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>商業計劃書</Link> {/* Use Link for BP */}
         <Link to="/en" className="block px-4 py-2 text-white hover:bg-gray-700 bg-sky-600" onClick={() => setMobileMenuOpen(false)}>
           EN 版本
         </Link>
