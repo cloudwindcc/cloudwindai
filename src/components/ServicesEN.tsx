@@ -3,88 +3,108 @@ import React from 'react';
 export const ServicesEN: React.FC = () => {
   const services = [
     {
-      title: "AI Marketing Suite",
-      description: "One-stop AI marketing solution: intelligent website generation, social media content creation, and brand story development. Build a complete digital marketing system within 30 days, reducing customer acquisition costs by up to 60%.",
-      features: ["AI Website/App Generation", "Social Media Content Engine", "Brand Story Planning", "Marketing Data Analysis"],
-      price: "From $1,280 USD",
-      icon: "🚀"
+      title: 'AI Marketing Suite',
+      description:
+        'One-stop AI marketing support for websites, social content, brand storytelling, and marketing data analysis, helping enterprises reduce acquisition costs and improve brand execution.',
+      features: ['Website/App Generation', 'Content Engine', 'Brand Story Planning', 'Marketing Analytics'],
+      price: 'From $1,280 USD',
+      icon: '🚀',
     },
     {
-      title: "AI Operations Assistant", 
-      description: "Enterprise internal operations intelligence: AI-assisted programming, intelligent customer service, and process automation. Average operational efficiency increases by 40%, reducing labor costs by 35%.",
-      features: ["AI-Assisted Programming", "Intelligent Customer Service", "Process Automation", "Efficiency Analysis"],
-      price: "$200-650 USD/month",
-      icon: "⚡"
+      title: 'AI Operations & Agent Automation',
+      description:
+        'A unified product combining operations optimization and custom AI agents: AI-assisted development, intelligent customer service, workflow automation, and role-specific assistants.',
+      features: ['AI-Assisted Development', 'Service Agents', 'Workflow Automation', 'Role Assistants'],
+      price: 'Scenario-based Quote',
+      icon: '⚙️',
     },
     {
-      title: "AI Intelligent Agents",
-      description: "Custom AI agent development: tailored to business needs, 24/7 non-stop operation. Can replace 80% of repetitive work with ROI exceeding 300%.",
-      features: ["Intelligent Customer Service", "Legal Assistant", "Financial Analyst", "Business Process Automation"],
-      price: "Custom Quote",
-      icon: "🤖"
+      title: 'AI Strategic Decision Engine',
+      description:
+        'Build private knowledge bases and decision models from enterprise data, providing business insights, operating analysis, and strategic planning support for management teams.',
+      features: ['Private Knowledge Base', 'Decision Models', 'Business Insight Analysis', 'Strategic Planning'],
+      price: 'From $65 USD/hour',
+      icon: '🎯',
     },
     {
-      title: "AI Strategic Decision Engine",
-      description: "Enterprise-level AI decision system: build decision models based on private data, providing business insights. Help enterprises make smarter strategic decisions.",
-      features: ["Private Knowledge Base", "Decision Support Models", "Business Insight Analysis", "Strategic Planning Assistance"],
-      price: "From $65 USD/hour",
-      icon: "🎯"
+      title: 'Financial Consulting & Advisory',
+      description:
+        'Financial advisory services for growing companies: business model review, financial modeling, financing strategy, valuation planning, and investor material preparation.',
+      features: ['Financial Modeling', 'Financing Strategy', 'Valuation Planning', 'Investor Materials'],
+      price: 'Project-based Quote',
+      icon: '💼',
     },
-    {
-      title: "Financial Consulting & Advisory",
-      description: "Financial advisory services for growing companies: business model review, financial modeling, financing strategy, valuation planning, and investor material preparation.",
-      features: ["Financial Modeling", "Financing Strategy", "Valuation Planning", "Investor Materials"],
-      price: "Project-based Quote",
-      icon: "💼"
-    }
   ];
 
   return (
-    <section id="services" className="content-section" style={{
-      padding: '6rem 2rem',
-      maxWidth: '1200px',
-      margin: '0 auto',
-      position: 'relative',
-      zIndex: 1,
-      backgroundColor: 'rgba(10, 15, 31, 0.7)',
-      borderRadius: '8px',
-      marginTop: '2rem',
-      marginBottom: '2rem'
-    }}>
+    <section
+      id="services"
+      className="content-section"
+      style={{
+        padding: '6rem 2rem',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        position: 'relative',
+        zIndex: 1,
+        backgroundColor: 'rgba(10, 15, 31, 0.7)',
+        borderRadius: '8px',
+        marginTop: '2rem',
+        marginBottom: '2rem',
+      }}
+    >
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-300">Core Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-300">
+          Core Services
+        </h2>
         <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-          Practical growth support across AI implementation, operating efficiency, and capital planning
+          Four focused service modules across AI implementation, operating efficiency, strategic decisions, and capital planning
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {services.map((service, index) => (
-          <div key={index} className="card p-8 rounded-xl shadow-2xl hover:shadow-sky-500/40 transition-all duration-300 transform hover:-translate-y-2" style={{
-            backgroundColor: 'rgba(17, 24, 39, 0.9)',
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(55, 65, 81, 0.4)'
-          }}>
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-4">{service.icon}</span>
+      <div className="grid md:grid-cols-2 gap-7">
+        {services.map((service) => (
+          <div
+            key={service.title}
+            className="card p-7 md:p-8 rounded-lg shadow-2xl hover:shadow-sky-500/35 transition-all duration-300 transform hover:-translate-y-2"
+            style={{
+              backgroundColor: 'rgba(17, 24, 39, 0.9)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(55, 65, 81, 0.4)',
+            }}
+          >
+            <div className="flex items-start gap-4 mb-5">
+              <span className="text-3xl leading-none">{service.icon}</span>
               <div>
-                <h3 className="text-xl font-bold text-sky-400">{service.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-sky-400">
+                  {service.title}
+                </h3>
               </div>
             </div>
-            
-            <p className="text-sm md:text-base text-gray-300 mb-4 leading-relaxed">{service.description}</p>
-            
-            <div className="mb-4">
-              <h4 className="text-sm font-semibold text-sky-300 mb-2">Core Features:</h4>
+
+            <p className="text-sm md:text-base text-gray-300 mb-5 leading-relaxed">
+              {service.description}
+            </p>
+
+            <div className="mb-5">
+              <h4 className="text-sm font-semibold text-sky-300 mb-3">
+                Core Features:
+              </h4>
               <div className="flex flex-wrap gap-2">
-                {service.features.map((feature, idx) => (
-                  <span key={idx} className="text-xs bg-sky-800/30 text-sky-300 px-3 py-1 rounded-full">{feature}</span>
+                {service.features.map((feature) => (
+                  <span
+                    key={feature}
+                    className="text-xs bg-sky-800/30 text-sky-300 px-3 py-1 rounded-full"
+                  >
+                    {feature}
+                  </span>
                 ))}
               </div>
             </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-base font-bold text-green-400">{service.price}</span>
+
+            <div className="flex justify-between items-center gap-4">
+              <span className="text-base font-bold text-green-400">
+                {service.price}
+              </span>
               <button className="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300">
                 Consult Now
               </button>
@@ -94,8 +114,10 @@ export const ServicesEN: React.FC = () => {
       </div>
 
       <div className="text-center mt-12">
-        <div className="bg-gradient-to-r from-sky-600 to-purple-600 p-6 rounded-xl max-w-2xl mx-auto">
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-2">30-Day Standard Delivery Commitment</h3>
+        <div className="bg-gradient-to-r from-sky-600 to-purple-600 p-6 rounded-lg max-w-2xl mx-auto">
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+            30-Day Standard Delivery Commitment
+          </h3>
           <p className="text-sm md:text-base text-gray-200 mb-4">
             Fixed Cycle · Fixed Price · Prototype First · Measurable Results
           </p>

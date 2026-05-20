@@ -7,11 +7,6 @@
 
 body {
   font-family: 'Noto Sans HK', sans-serif;
-  /* Keep the global background consistent across the site */
-  background-image: url('https://cdn-hsyq-static-bak.shanhutech.cn/bizhi/staticwp/201712/7e0d7cd866c7be1dd1ada4d21b5e204e.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
   background-color: #0a0f1f;
   color: #e0e0e0;
   overflow-x: hidden;
