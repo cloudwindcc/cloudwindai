@@ -98,7 +98,7 @@ export const ContactEN: React.FC = () => {
         </form>
         <p className="text-center text-sm md:text-base text-gray-400 mt-6 leading-relaxed">
           You can also contact us through:<br />
-          Address: Unit 405-414，Level 4 Core E, CypberPort 3, Hong Kong<br />
+          Address: Unit 405-414, Level 4 Core E, CyberPort 3, Hong Kong<br />
           Email: <a href="mailto:info@cloudwindai.com" className="text-sky-300 hover:underline">info@cloudwindai.com</a><br />
           Website: CloudWindAI.com
         </p>
