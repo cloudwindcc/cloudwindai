@@ -14,4 +14,4 @@ Map outlines: [Natural Earth](https://www.naturalearthdata.com/), public domain,
 Markers are representative city locations, not office addresses. The site does not establish local entities, licenses, project rights or verified partnerships.
 
 
-新增 `/cases` 客户案例页（11 个网站卡片）；导航和页脚包含探索产品入口 `https://www.cloudwind.ai`。旧全球足迹地址通过 301 跳转至 `/global`。
+新增 `/cases` 客户案例页（10 个案例卡片（高才与优才合并））；导航和页脚包含探索产品入口 `https://www.cloudwind.ai`。旧全球足迹地址通过 301 跳转至 `/global`。
