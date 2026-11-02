@@ -43,28 +43,33 @@ export const NavigationEN: React.FC = () => {
             AI Solutions Provider
           </div>
         </Link>
-        <div className="space-x-5 text-base hidden md:block">
+        <div className="space-x-5 text-base hidden lg:block">
           <Link to="/en" className="hover:text-sky-400 transition-colors">Home</Link> {/* Use Link */}
           <a href="#services" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#services')}>Services</a>
           <a href="#about" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#about')}>About Us</a>
+          <a href="/global-presence" className="hover:text-sky-400 transition-colors">Global Presence</a>
           <a href="#contact" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#contact')}>Contact</a>
           <Link to="/" className="bg-sky-600 hover:bg-sky-700 text-white px-3 py-1 rounded-md text-sm transition-colors">
             中文
           </Link>
         </div>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
-            className="text-white focus:outline-none"
+            className="text-white rounded-md p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-300"
             onClick={toggleMobileMenu}
+            aria-label="Open navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="main-mobile-navigation"
           >
             <Menu className="w-6 h-6" />
           </button>
         </div>
       </div>
-      <div className={`md:hidden bg-gray-800 bg-opacity-95 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div id="main-mobile-navigation" className={`lg:hidden bg-gray-800 bg-opacity-95 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <Link to="/en" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>Home</Link> {/* Use Link */}
         <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#services')}>Services</a>
         <a href="#about" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#about')}>About Us</a>
+        <a href="/global-presence" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>Global Presence</a>
         <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#contact')}>Contact</a>
         <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-700 bg-sky-600" onClick={() => setMobileMenuOpen(false)}>
           中文版本

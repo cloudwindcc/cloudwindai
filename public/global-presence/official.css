@@ -1,0 +1,82 @@
+/* Blend the global network page with the official CloudWind AI website. */
+:root {
+  --bg: #0a0f1f;
+  --cyan: #7dd3fc;
+  --blue: #38bdf8;
+  --font: 'Noto Sans HK', 'Microsoft YaHei', sans-serif;
+  --heading: 'Manrope', 'Noto Sans HK', 'Microsoft YaHei', sans-serif;
+}
+html { scroll-padding-top: 108px; }
+body { padding-top: 80px; }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: 80px;
+  background: rgba(10, 15, 31, .88);
+  backdrop-filter: blur(10px);
+  border-bottom-color: rgba(125, 211, 252, .13);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, .13);
+}
+.header-inner { width: min(1440px, calc(100% - 64px)); gap: 25px; }
+.official-brand > span { letter-spacing: normal; line-height: 1.3; }
+.official-brand b { display: block; font: 700 20px/1.4 var(--font); color: #38bdf8; }
+.official-brand small { margin-top: 2px; font: 400 12px/1.5 var(--font); color: #d1d5db; letter-spacing: .1px; }
+html[lang=zh-CN] .official-brand b { font-family: 'STFangsong', 'FangSong', 'Noto Sans HK', sans-serif; }
+.header .official-desktop-nav { gap: 25px; }
+.header nav a { font-size: 12px; }
+.header nav a.active { color: #7dd3fc; }
+.header nav a.active:after { bottom: -27px; background: #38bdf8; }
+.header-actions { gap: 14px; }
+.language { border: 1px solid rgba(125, 211, 252, .2); border-radius: 6px; padding: 8px 12px; }
+.site-menu-toggle { display: none; width: 42px; height: 42px; background: none; border: 1px solid #334155; border-radius: 6px; padding: 10px; }
+.site-menu-toggle span { display: block; height: 1px; margin: 4px 0; background: #e2e8f0; }
+.header .official-mobile-nav { display: none; }
+.header .official-mobile-nav[hidden] { display: none; }
+.hero:before { background: radial-gradient(ellipse, rgba(14, 165, 233, .12), transparent 70%); }
+.hero h1 { font-weight: 550; }
+.detail-contact { background: #38bdf8; border-radius: 6px; }
+.detail-contact:hover { background: #7dd3fc; }
+.filter-btn.selected { background: rgba(14, 165, 233, .12); border-color: rgba(125, 211, 252, .4); }
+.map-center-guide { stroke: #7dd3fc; }
+.footer { padding-top: 28px; padding-bottom: 25px; }
+.footer strong { color: #e2e8f0; }
+
+@media (max-width: 1100px) {
+  .header .official-desktop-nav { display: none; }
+  .site-menu-toggle { display: block; }
+  .header .official-mobile-nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: auto;
+    display: block;
+    padding: 10px 24px 16px;
+    background: rgba(15, 23, 42, .98);
+    border-bottom: 1px solid #334155;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .25);
+  }
+  .header .official-mobile-nav a { display: block; padding: 12px; font-size: 14px; }
+  .header .official-mobile-nav [aria-current=page] { color: #7dd3fc; }
+}
+@media (max-width: 570px) {
+  body { padding-top: 74px; }
+  .header { height: 74px; }
+  .header-inner { width: calc(100% - 32px); gap: 12px; }
+  .official-brand { min-width: 0; flex-shrink: 1; }
+  .official-brand b { font-size: clamp(13px, 3.8vw, 18px); white-space: nowrap; }
+  .official-brand small { font-size: 9px; }
+  .header-actions { flex-shrink: 0; gap: 8px; }
+  .language { padding: 8px; font-size: 10px; gap: 6px; min-height: 40px; }
+  .header .official-mobile-nav { top: 74px; }
+  .site-menu-toggle { width: 40px; height: 40px; }
+  html[lang=zh-CN] .hero h1 { font-size: clamp(29px, 9.5vw, 38px); }
+}
+@media print {
+  body { padding-top: 0; }
+  .header { position: static; background: white; box-shadow: none; }
+  .site-menu-toggle, .official-mobile-nav { display: none !important; }
+}

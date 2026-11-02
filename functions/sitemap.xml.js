@@ -1,4 +1,4 @@
-const lastmod = "2026-07-07";
+const lastmod = "2026-11-02";
 
 function escapeXml(value) {
   return value
@@ -19,6 +19,11 @@ export function onRequestGet({ request }) {
     },
     {
       loc: `${origin}/en`,
+      priority: "0.9",
+      changefreq: "monthly",
+    },
+    {
+      loc: `${origin}/global-presence`,
       priority: "0.9",
       changefreq: "monthly",
     },
