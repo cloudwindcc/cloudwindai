@@ -31,6 +31,7 @@
   function applyLanguage() {
     document.documentElement.lang = state.lang === 'en' ? 'en' : 'zh-CN';
     document.querySelectorAll('[data-en][data-zh]').forEach(el => el.innerHTML = el.dataset[state.lang]);
+    document.querySelectorAll('[data-case-link]').forEach(el=>el.setAttribute('href','/cases'+(state.lang==='zh'?'?lang=zh':'')));
     document.querySelectorAll('[data-site-link]').forEach(el => el.setAttribute('href',homeHref()+(el.dataset.siteLink ? '#'+el.dataset.siteLink : '')));
     $('site-menu-toggle').setAttribute('aria-label',tr('Open navigation menu','打开导航菜单'));
     $('language').classList.toggle('zh',state.lang === 'zh');

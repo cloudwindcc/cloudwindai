@@ -1,1 +1,3 @@
-/* /index.html 200
+/global-presence /global 301
+/global-presence/ /global 301
+/global-presence.html /global 301

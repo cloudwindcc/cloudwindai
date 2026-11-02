@@ -43,17 +43,19 @@ export const Navigation: React.FC = () => {
             CloudWind AI Limited
           </div>
         </Link>
-        <div className="space-x-5 text-base hidden lg:block">
+        <div className="space-x-5 text-base hidden xl:block">
           <Link to="/" className="hover:text-sky-400 transition-colors">首頁</Link> {/* Use Link */}
           <a href="#services" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#services')}>服務</a>
           <a href="#about" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#about')}>關於我們</a>
-          <a href="/global-presence?lang=zh" className="hover:text-sky-400 transition-colors">全球業務</a>
+          <a href="/global?lang=zh" className="hover:text-sky-400 transition-colors">全球業務</a>
+          <a href="/cases?lang=zh" className="hover:text-sky-400 transition-colors">客户案例</a>
+          <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="bg-sky-600 hover:bg-sky-500 text-white px-3 py-2 rounded-md text-sm">探索产品 ↗</a>
           <a href="#contact" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#contact')}>聯絡方式</a>
           <Link to="/en" className="bg-sky-600 hover:bg-sky-700 text-white px-3 py-1 rounded-md text-sm transition-colors">
             EN
           </Link>
         </div>
-        <div className="lg:hidden">
+        <div className="xl:hidden flex items-center gap-3"><a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="text-xs text-sky-300">探索产品 ↗</a>
           <button
             className="text-white rounded-md p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-300"
             onClick={toggleMobileMenu}
@@ -65,11 +67,13 @@ export const Navigation: React.FC = () => {
           </button>
         </div>
       </div>
-      <div id="main-mobile-navigation" className={`lg:hidden bg-gray-800 bg-opacity-95 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div id="main-mobile-navigation" className={`xl:hidden bg-gray-800 bg-opacity-95 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>首頁</Link> {/* Use Link */}
         <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#services')}>服務</a>
         <a href="#about" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#about')}>關於我們</a>
-        <a href="/global-presence?lang=zh" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>全球業務</a>
+        <a href="/global?lang=zh" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>全球業務</a>
+        <a href="/cases?lang=zh" className="block px-4 py-2 text-white hover:bg-gray-700">客户案例</a>
+        <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sky-300 hover:bg-gray-700">探索产品 ↗</a>
         <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#contact')}>聯絡方式</a>
         <Link to="/en" className="block px-4 py-2 text-white hover:bg-gray-700 bg-sky-600" onClick={() => setMobileMenuOpen(false)}>
           EN 版本

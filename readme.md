@@ -15,11 +15,11 @@
 
 - `/` - 繁體中文官網
 - `/en` - 英文官網
-- `/global-presence` - 全球業務與行業佈局（英文；`?lang=zh` 切換簡體中文）
+- `/global` - 全球業務與行業佈局（英文；`?lang=zh` 切換簡體中文）
 
 全球業務頁以香港為地圖中心，核心市場依序為香港、中國內地、新加坡、菲律賓。頁面保留 15 個節點、六大行業與地區篩選，以及中國內地和香港的城市細節圖。未核實業務狀態和建議方向均有獨立標示。
 
-此頁為獨立靜態頁：入口位於 `public/global-presence.html`，資源與維護說明位於 `public/global-presence/`。Vite 構建時將兩者複製至 `dist/`，Cloudflare Pages 以乾淨網址 `/global-presence` 提供服務。中英文首頁使用普通連結前往此頁，避免 React Router 的首頁回退攔截。新增頁沿用官網字體、品牌字標、天藍色與半透明導覽列；聯絡入口回到對應語言的官網聯絡區塊。
+此頁為獨立靜態頁：入口位於 `public/global.html`，資源與維護說明位於 `public/global-presence/`。Vite 構建時將兩者複製至 `dist/`，Cloudflare Pages 以乾淨網址 `/global` 提供服務。中英文首頁使用普通連結前往此頁，避免 React Router 的首頁回退攔截。新增頁沿用官網字體、品牌字標、天藍色與半透明導覽列；聯絡入口回到對應語言的官網聯絡區塊。
 
 ## 核心業務模組
 
@@ -62,3 +62,6 @@ npm run lint
 
 - **郵箱**: info@cloudwindai.com
 - **網址**: CloudWindAI.com
+
+
+新增 `/cases` 客户案例页（11 个网站卡片）；导航和页脚包含探索产品入口 `https://www.cloudwind.ai`。旧全球足迹地址通过 301 跳转至 `/global`。

@@ -23,10 +23,11 @@ export function onRequestGet({ request }) {
       changefreq: "monthly",
     },
     {
-      loc: `${origin}/global-presence`,
+      loc: `${origin}/global`,
       priority: "0.9",
       changefreq: "monthly",
     },
+    { loc: `${origin}/cases`, priority: "0.8", changefreq: "monthly" },
   ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
