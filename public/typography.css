@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+HK:wght@400;500;600;700&display=swap');
+
+/* Shared typography from the Global Presence page. */
+:root{--font:'Noto Sans HK','Microsoft YaHei',sans-serif;--heading:'Manrope','Noto Sans HK','Microsoft YaHei',sans-serif}
+body{font-family:var(--font);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body h1,body h2,body h3,body h4,#root :is(h1,h2,h3,h4){font-family:var(--heading);font-weight:500}
+body h1,#root h1{font-weight:550}
+button,input,textarea,select{font-family:inherit}

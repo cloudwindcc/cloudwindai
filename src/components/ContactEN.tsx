@@ -96,14 +96,6 @@ export const ContactEN: React.FC = () => {
             Send Message
           </button>
         </form>
-        <p className="text-center text-sm md:text-base text-gray-400 mt-6 leading-relaxed">
-          You can also contact us through:<br />
-          Address: Unit 405-414, Level 4 Core E, CyberPort 3, Hong Kong<br />
-          Email: <a href="mailto:info@cloudwindai.com" className="text-sky-300 hover:underline">info@cloudwindai.com</a><br />
-          Websites: <a href="https://www.cloudwindai.com" className="text-sky-300 hover:underline">www.CloudWindAI.com</a><br />
-          <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="text-sky-300 hover:underline">www.CloudWind.AI</a><br />
-          Phone: <a href="tel:+85264759959" className="text-sky-300 hover:underline">+852 64759959</a>
-        </p>
       </div>
     </section>
   );

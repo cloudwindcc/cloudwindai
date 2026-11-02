@@ -36,7 +36,7 @@ export const NavigationEN: React.FC = () => {
     <nav className="p-4 shadow-lg fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: 'rgba(10, 15, 31, 0.85)', backdropFilter: 'blur(10px)' }}>
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/en" className="company-logo-container flex flex-col items-center"> {/* Use Link for home */}
-          <div className="text-lg md:text-xl font-bold text-sky-400" style={{ fontFamily: '"STFangsong", "FangSong", "仿宋", "Noto Sans SC", "Inter", sans-serif' }}>
+          <div className="text-lg md:text-xl font-bold text-sky-400" style={{ fontFamily: '"STFangsong", "FangSong", "Noto Sans HK", sans-serif' }}>
             CloudWind AI Limited
           </div>
           <div className="text-xs md:text-sm text-gray-300 font-sans mt-0.5">

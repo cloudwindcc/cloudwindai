@@ -91,14 +91,6 @@ export const Contact: React.FC = () => {
             發送訊息
           </button>
         </form>
-        <p className="text-center text-sm md:text-base text-gray-400 mt-6 leading-relaxed">
-          您也可以透過以下方式聯絡我們：<br />
-          地址：香港數碼港，Unit 405-414，Level 4 Core E, CyberPort 3<br />
-          郵箱：<a href="mailto:info@cloudwindai.com" className="text-sky-300 hover:underline">info@cloudwindai.com</a><br />
-          網址：<a href="https://www.cloudwindai.com" className="text-sky-300 hover:underline">www.CloudWindAI.com</a><br />
-          <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="text-sky-300 hover:underline">www.CloudWind.AI</a><br />
-          電話：<a href="tel:+85264759959" className="text-sky-300 hover:underline">+852 64759959</a>
-        </p>
       </div>
     </section>
   );

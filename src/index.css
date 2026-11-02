@@ -1,12 +1,11 @@
-/* Import Noto Sans HK font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Noto Sans HK', sans-serif;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
   background-color: #0a0f1f;
   color: #e0e0e0;
   overflow-x: hidden;
