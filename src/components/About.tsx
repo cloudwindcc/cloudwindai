@@ -1,4 +1,5 @@
 import React from 'react';
+import { OrganizationChart } from './OrganizationChart';
 
 export const About: React.FC = () => {
   const stats = [
@@ -6,12 +7,6 @@ export const About: React.FC = () => {
     { label: '客戶滿意度', value: '98%', desc: '持續合作率' },
     { label: '平均 ROI', value: '300%', desc: '投資回報倍數' },
     { label: '交付週期', value: '30天', desc: '標準交付時間' },
-  ];
-
-  const team = [
-    { role: '戰略與執行負責人', expertise: '負責公司戰略、商業諮詢、客戶關係與融資推進', avatar: '01' },
-    { role: '技術與 AI 架構負責人', expertise: '負責 AI 架構、產品開發、技術路線與交付質量', avatar: '02' },
-    { role: '市場與增長負責人', expertise: '負責品牌建設、市場拓展、客戶增長與渠道合作', avatar: '03' },
   ];
 
   return (
@@ -77,20 +72,7 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-sky-900/30 to-purple-900/30 p-8 rounded-lg">
-        <h3 className="text-xl md:text-2xl font-bold text-center mb-8 text-sky-300">核心團隊分工</h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          {team.map((member) => (
-            <div key={member.role} className="text-center p-6 bg-gray-800/50 rounded-lg">
-              <div className="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-xl font-bold text-white mx-auto mb-4">
-                {member.avatar}
-              </div>
-              <h4 className="text-base font-bold text-sky-400 mb-2">{member.role}</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">{member.expertise}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <OrganizationChart />
     </section>
   );
 };

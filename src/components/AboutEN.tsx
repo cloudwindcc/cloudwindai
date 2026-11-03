@@ -1,4 +1,5 @@
 import React from 'react';
+import { OrganizationChart } from './OrganizationChart';
 
 export const AboutEN: React.FC = () => {
   const stats = [
@@ -6,12 +7,6 @@ export const AboutEN: React.FC = () => {
     { label: "Customer Satisfaction", value: "98%", desc: "Continuous Partnership Rate" },
     { label: "Average ROI", value: "300%", desc: "Return on Investment Multiple" },
     { label: "Delivery Cycle", value: "30 Days", desc: "Standard Delivery Time" }
-  ];
-
-  const team = [
-    { role: "Strategy & Execution Lead", expertise: "Company strategy, business consulting, client relationships, and financing coordination", avatar: "01" },
-    { role: "Technology & AI Architecture Lead", expertise: "AI architecture, product development, technical roadmap, and delivery quality", avatar: "02" },
-    { role: "Market & Growth Lead", expertise: "Brand building, market expansion, customer growth, and channel partnerships", avatar: "03" }
   ];
 
   return (
@@ -82,21 +77,7 @@ export const AboutEN: React.FC = () => {
         </div>
       </div>
 
-      {/* Founding Team */}
-      <div className="bg-gradient-to-r from-sky-900/30 to-purple-900/30 p-8 rounded-xl">
-        <h3 className="text-xl md:text-2xl font-bold text-center mb-8 text-sky-300">Core Team Functions</h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          {team.map((member, index) => (
-            <div key={index} className="text-center p-6 bg-gray-800/50 rounded-lg">
-              <div className="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-xl font-bold text-white mx-auto mb-4">
-                {member.avatar}
-              </div>
-              <h4 className="text-base font-bold text-sky-400 mb-2">{member.role}</h4>
-              <p className="text-sm text-gray-400 leading-relaxed">{member.expertise}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <OrganizationChart english />
 
       {/* Customer Success Stories */}
       <div className="mt-12 bg-gradient-to-r from-green-900/20 to-blue-900/20 p-8 rounded-xl">
