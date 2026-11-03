@@ -32,8 +32,8 @@ export const Footer: React.FC<FooterProps> = ({ year = new Date().getFullYear() 
         <div className="business-footer-bottom">
           <p>&copy; {year} 雲風智能有限公司<br className="md:hidden" /> (CloudWind AI Limited)</p>
           <div className="business-footer-links">
-            <a href={english ? '/cases' : '/cases?lang=zh'}>{english ? 'Client Cases' : '客户案例'}</a>
-            <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="business-footer-action">{english ? 'Explore Products ↗' : '探索产品 ↗'}</a>
+            <a href={english ? '/cases?lang=en' : '/cases'}>{english ? 'Client Cases' : '客戶案例'}</a>
+            <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="business-footer-action">{english ? 'Explore Products ↗' : '探索產品 ↗'}</a>
           </div>
         </div>
       </div>

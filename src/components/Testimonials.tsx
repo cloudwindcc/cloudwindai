@@ -10,7 +10,7 @@ export const Testimonials: React.FC = () => {
     },
     {
       content: 'AI 客服與營運助手上線後，客服團隊人力成本減少 50%，客戶滿意度反而提升了 20%。',
-      author: '電商平台客戶',
+      author: '電商平臺客戶',
       company: '線上交易行業',
       role: '營運團隊回饋',
     },

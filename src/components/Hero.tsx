@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
-            <a href="/cases?lang=zh" className="inline-flex mb-6 text-sky-200 border border-sky-400/40 rounded-lg px-5 py-3 hover:bg-sky-500/15">查看部分客户案例 ↗</a>
+            <a href="/cases" className="inline-flex mb-6 text-sky-200 border border-sky-400/40 rounded-lg px-5 py-3 hover:bg-sky-500/15">查看部分客戶案例 ↗</a>
             <div className="grid grid-cols-3 gap-4 max-w-xl border-t border-sky-300/20 pt-6">
               {metrics.map((metric) => (
                 <div key={metric.label}>

@@ -5,15 +5,15 @@
   const findIndustry = id => industries.find(i => i.id === id);
   const findMarket = id => markets.find(m => m.id === id);
   const mapCenter = findMarket('hong-kong');
-  const state = {lang: new URLSearchParams(location.search).get('lang') === 'zh' ? 'zh' : 'en', industry:'all', region:'all', selected:mapCenter.id, view:'map'};
+  const state = {lang: new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'zh', industry:'all', region:'all', selected:mapCenter.id, view:'map'};
   const tr = (en,zh) => state.lang === 'en' ? en : zh;
   const name = item => item[state.lang];
   const shortIndustry = id => state.lang === 'en' ? findIndustry(id).short : findIndustry(id).zh;
   const fullIndustry = id => name(findIndustry(id));
   const isMatch = m => (state.region === 'all' || state.region === m.region) && (state.industry === 'all' || [...m.primary,...m.secondary].includes(state.industry));
   const visibleMarkets = () => markets.filter(isMatch);
-  const statusText = m => m.status === 'exploring' ? tr('Exploring','拓展中') : tr('To be confirmed','待确认');
-  const priorityText = m => m.core ? tr('Core market','核心市场') : tr('Other market','其他市场');
+  const statusText = m => m.status === 'exploring' ? tr('Exploring','拓展中') : tr('To be confirmed','待確認');
+  const priorityText = m => m.core ? tr('Core market','核心市場') : tr('Other market','其他市場');
   const coordinates = m => `${Math.abs(m.lat).toFixed(2)}° ${m.lat >= 0 ? 'N' : 'S'} / ${Math.abs(m.lon).toFixed(2)}° ${m.lon >= 0 ? 'E' : 'W'}`;
   const homeHref = () => state.lang === 'en' ? '/en' : '/';
   const icon = id => {
@@ -29,37 +29,37 @@
   };
 
   function applyLanguage() {
-    document.documentElement.lang = state.lang === 'en' ? 'en' : 'zh-CN';
+    document.documentElement.lang = state.lang === 'en' ? 'en' : 'zh-Hant';
     document.querySelectorAll('[data-en][data-zh]').forEach(el => el.innerHTML = el.dataset[state.lang]);
-    document.querySelectorAll('[data-case-link]').forEach(el=>el.setAttribute('href','/cases'+(state.lang==='zh'?'?lang=zh':'')));
+    document.querySelectorAll('[data-case-link]').forEach(el=>el.setAttribute('href','/cases'+(state.lang==='en'?'?lang=en':'')));
     document.querySelectorAll('[data-site-link]').forEach(el => el.setAttribute('href',homeHref()+(el.dataset.siteLink ? '#'+el.dataset.siteLink : '')));
-    $('site-menu-toggle').setAttribute('aria-label',tr('Open navigation menu','打开导航菜单'));
+    $('site-menu-toggle').setAttribute('aria-label',tr('Open navigation menu','打開導航菜單'));
     $('language').classList.toggle('zh',state.lang === 'zh');
-    $('language').setAttribute('aria-label',tr('Switch to Simplified Chinese','Switch to English'));
-    document.querySelector('meta[name=description]').content = tr("Explore CloudWind AI's strategic global network: four core markets, six industry verticals and 15 geographic locations.",'探索 CloudWind AI 全球业务与行业布局：四大核心市场、六大行业、十五个地理节点。');
-    document.title = tr('Global Presence & Industry Focus · CloudWind AI','全球业务与行业布局 · CloudWind AI');
-    $('industry-filters').setAttribute('aria-label',tr('Filter by industry','按行业筛选'));
-    $('region').setAttribute('aria-label',tr('Filter by region','按地区筛选'));
-    $('world-title').textContent = tr('CloudWind AI global business map','CloudWind AI 全球业务地图');
-    $('world-desc').textContent = tr('World map centered on Hong Kong, with 15 locations. Mainland China and Hong Kong also appear in a detailed inset. Use the location list for a text alternative.','以香港为中心的世界地图，共 15 个地理节点，中国内地及香港另设城市放大图。可切换列表查看全部节点文字信息。');
-    $('china-map').setAttribute('aria-label',tr('Mainland China and Hong Kong city detail','中国内地及香港城市细节'));
+    $('language').setAttribute('aria-label',tr('Switch to Traditional Chinese','Switch to English'));
+    document.querySelector('meta[name=description]').content = tr("Explore CloudWind AI's strategic global network: four core markets, six industry verticals and 15 geographic locations.",'探索 CloudWind AI 全球業務與行業佈局：四大核心市場、六大行業、十五個地理節點。');
+    document.title = tr('Global Presence & Industry Focus · CloudWind AI','全球業務與行業佈局 · CloudWind AI');
+    $('industry-filters').setAttribute('aria-label',tr('Filter by industry','按行業篩選'));
+    $('region').setAttribute('aria-label',tr('Filter by region','按地區篩選'));
+    $('world-title').textContent = tr('CloudWind AI global business map','CloudWind AI 全球業務地圖');
+    $('world-desc').textContent = tr('World map centered on Hong Kong, with 15 locations. Mainland China and Hong Kong also appear in a detailed inset. Use the location list for a text alternative.','以香港為中心的世界地圖，共 15 個地理節點，中國內地及香港另設城市放大圖。可切換列表查看全部節點文字信息。');
+    $('china-map').setAttribute('aria-label',tr('Mainland China and Hong Kong city detail','中國內地及香港城市細節'));
   }
 
   function renderCoreCards() {
     const core = [
-      {id:'hong-kong',en:'Hong Kong',zh:'香港',enDesc:'FinTech · Web3 · Software',zhDesc:'金融科技 · Web3 · 软件'},
-      {id:'shenzhen',en:'Mainland China',zh:'中国内地',enDesc:'Deep tech · Semiconductors',zhDesc:'硬科技 · 半导体 · 先进制造'},
-      {id:'singapore',en:'Singapore',zh:'新加坡',enDesc:'FinTech · Regional partnerships',zhDesc:'金融科技 · 区域合作'},
-      {id:'philippines',en:'Philippines',zh:'菲律宾',enDesc:'Payments · Software · Property',zhDesc:'数字支付 · 企业软件 · 房地产'}
+      {id:'hong-kong',en:'Hong Kong',zh:'香港',enDesc:'FinTech · Web3 · Software',zhDesc:'金融科技 · Web3 · 軟件'},
+      {id:'shenzhen',en:'Mainland China',zh:'中國內地',enDesc:'Deep tech · Semiconductors',zhDesc:'硬科技 · 半導體 · 先進製造'},
+      {id:'singapore',en:'Singapore',zh:'新加坡',enDesc:'FinTech · Regional partnerships',zhDesc:'金融科技 · 區域合作'},
+      {id:'philippines',en:'Philippines',zh:'菲律賓',enDesc:'Payments · Software · Property',zhDesc:'數字支付 · 企業軟件 · 房地產'}
     ];
     $('core-cards').innerHTML = core.map(m => `<button class="core-card" data-core="${m.id}" aria-label="${tr('Explore ','探索')}${name(m)}"><span class="core-card-label"><span class="core-diamond">◆</span>${name(m)}</span><small>${m[state.lang+'Desc']}</small><span class="core-arrow">↗</span></button>`).join('');
   }
 
   function renderControls() {
-    $('industry-filters').innerHTML = `<button class="filter-btn ${state.industry === 'all' ? 'selected' : ''}" data-industry="all" aria-pressed="${state.industry === 'all'}">${tr('All industries','全部行业')}</button>` + industries.map(i => `<button class="filter-btn ${state.industry === i.id ? 'selected' : ''}" style="--industry-color:${i.color}" data-industry="${i.id}" aria-pressed="${state.industry === i.id}" aria-label="${name(i)}"><i aria-hidden="true"></i>${state.lang === 'en' ? i.short : {fintech:'金融科技 / Web3',property:'房地产 / 基建',deeptech:'硬科技 / 半导体',software:'软件 / AI',resources:'矿业 / 自然资源',marketing:'AI 营销'}[i.id]}</button>`).join('');
+    $('industry-filters').innerHTML = `<button class="filter-btn ${state.industry === 'all' ? 'selected' : ''}" data-industry="all" aria-pressed="${state.industry === 'all'}">${tr('All industries','全部行業')}</button>` + industries.map(i => `<button class="filter-btn ${state.industry === i.id ? 'selected' : ''}" style="--industry-color:${i.color}" data-industry="${i.id}" aria-pressed="${state.industry === i.id}" aria-label="${name(i)}"><i aria-hidden="true"></i>${state.lang === 'en' ? i.short : {fintech:'金融科技 / Web3',property:'房地產 / 基建',deeptech:'硬科技 / 半導體',software:'軟件 / AI',resources:'礦業 / 自然資源',marketing:'AI 營銷'}[i.id]}</button>`).join('');
     $('region').innerHTML = regions.map(r => `<option value="${r.id}" ${r.id === state.region ? 'selected' : ''}>${name(r)}</option>`).join('');
     const count = visibleMarkets().length;
-    $('match-count').textContent = tr(`${count} of 15 locations`,`${count} / 15 个节点`);
+    $('match-count').textContent = tr(`${count} of 15 locations`,`${count} / 15 個節點`);
     $('view-map').classList.toggle('selected',state.view === 'map');
     $('view-list').classList.toggle('selected',state.view === 'list');
     $('view-map').setAttribute('aria-pressed',state.view === 'map');
@@ -69,13 +69,13 @@
   }
 
   function tags(m,ids) {
-    return ids.map(id => `<span class="industry-tag ${m.proposed.includes(id) ? 'is-proposed' : ''}">${fullIndustry(id)}${m.proposed.includes(id) ? `<small>${tr('Proposed','建议')}</small>` : ''}</span>`).join('');
+    return ids.map(id => `<span class="industry-tag ${m.proposed.includes(id) ? 'is-proposed' : ''}">${fullIndustry(id)}${m.proposed.includes(id) ? `<small>${tr('Proposed','建議')}</small>` : ''}</span>`).join('');
   }
 
   function renderDetail() {
     const m = findMarket(state.selected);
     if (!m || !isMatch(m)) {
-      $('location-detail').innerHTML = `<div class="empty-detail"><p>${tr('No matching locations.<br>Try another industry or region.','暂无匹配节点。<br>请更换行业或地区筛选。')}</p></div>`;
+      $('location-detail').innerHTML = `<div class="empty-detail"><p>${tr('No matching locations.<br>Try another industry or region.','暫無匹配節點。<br>請更換行業或地區篩選。')}</p></div>`;
       $('location-detail').removeAttribute('aria-labelledby');
       return;
     }
@@ -84,33 +84,33 @@
     const city = state.lang === 'en' ? m.city : m.city_zh;
     $('location-detail').innerHTML = `
       <div class="detail-top"><span class="detail-region">${name(region)}</span><span class="detail-order">${String(markets.indexOf(m)+1).padStart(2,'0')} / 15</span></div>
-      <div class="detail-location-code">${m.core ? '◆ '+tr('STRATEGIC FOCUS','战略重点') : '＋ '+tr('GLOBAL NETWORK','全球网络')}</div>
+      <div class="detail-location-code">${m.core ? '◆ '+tr('STRATEGIC FOCUS','戰略重點') : '＋ '+tr('GLOBAL NETWORK','全球網絡')}</div>
       <h3 id="detail-title">${name(m)}</h3><div class="detail-coordinate">${city} · ${coordinates(m)}</div>
-      <div class="detail-badges"><span class="badge ${m.core ? 'core-badge' : ''}">${m.core ? '◆' : '○'} ${priorityText(m)}${m.core === 'china' ? tr(' · Mainland China',' · 中国内地') : ''}</span><span class="badge status-${m.status}">${statusText(m)}</span></div>
-      <div class="detail-label">${tr('PRIMARY INDUSTRIES','主要行业')}</div><div class="industry-tags">${tags(m,m.primary)}</div>
-      ${m.secondary.length ? `<div class="detail-label">${tr('SECONDARY INDUSTRIES','补充行业')}</div><div class="industry-tags secondary-tags">${tags(m,m.secondary)}</div>` : ''}
-      ${m.subtags ? `<div class="detail-subtags">${m.subtags.map(t=>state.lang==='en'?t:({'Semiconductors':'半导体','Advanced Manufacturing':'先进制造','Electronics Manufacturing':'电子制造'}[t]||t)).join(' · ')}</div>` : ''}
+      <div class="detail-badges"><span class="badge ${m.core ? 'core-badge' : ''}">${m.core ? '◆' : '○'} ${priorityText(m)}${m.core === 'china' ? tr(' · Mainland China',' · 中國內地') : ''}</span><span class="badge status-${m.status}">${statusText(m)}</span></div>
+      <div class="detail-label">${tr('PRIMARY INDUSTRIES','主要行業')}</div><div class="industry-tags">${tags(m,m.primary)}</div>
+      ${m.secondary.length ? `<div class="detail-label">${tr('SECONDARY INDUSTRIES','補充行業')}</div><div class="industry-tags secondary-tags">${tags(m,m.secondary)}</div>` : ''}
+      ${m.subtags ? `<div class="detail-subtags">${m.subtags.map(t=>state.lang==='en'?t:({'Semiconductors':'半導體','Advanced Manufacturing':'先進製造','Electronics Manufacturing':'電子製造'}[t]||t)).join(' · ')}</div>` : ''}
       <p class="detail-description">${m[state.lang+'Desc']}</p>
-      <div class="detail-bottom"><a class="detail-contact" href="${homeHref()}#contact"><span>${tr('Explore partnership','探索合作机会')}</span><span>↗</span></a><p class="detail-note">${tr('Continues to our existing contact form.','前往官网现有联系表单。')}</p></div>`;
+      <div class="detail-bottom"><a class="detail-contact" href="${homeHref()}#contact"><span>${tr('Explore partnership','探索合作機會')}</span><span>↗</span></a><p class="detail-note">${tr('Continues to our existing contact form.','前往官網現有聯繫表單。')}</p></div>`;
   }
 
   function renderList() {
     const current = visibleMarkets();
-    $('market-list').innerHTML = current.length ? current.map(m => `<button class="list-location ${state.selected === m.id ? 'selected' : ''}" data-location="${m.id}" aria-pressed="${state.selected === m.id}"><strong><span class="list-flag">${m.core ? '◆' : '○'}</span>${name(m)}</strong><span class="list-industries">${[...m.primary,...m.secondary].map(shortIndustry).join(' · ')}</span><small>${priorityText(m)} · ${statusText(m)}${m.proposed.length ? tr(' · Includes proposed directions',' · 含建议方向') : ''}</small></button>`).join('') : `<p class="empty-list">${tr('No matching locations. Try another industry or region.','暂无匹配节点，请更换行业或地区。')}</p>`;
+    $('market-list').innerHTML = current.length ? current.map(m => `<button class="list-location ${state.selected === m.id ? 'selected' : ''}" data-location="${m.id}" aria-pressed="${state.selected === m.id}"><strong><span class="list-flag">${m.core ? '◆' : '○'}</span>${name(m)}</strong><span class="list-industries">${[...m.primary,...m.secondary].map(shortIndustry).join(' · ')}</span><small>${priorityText(m)} · ${statusText(m)}${m.proposed.length ? tr(' · Includes proposed directions',' · 含建議方向') : ''}</small></button>`).join('') : `<p class="empty-list">${tr('No matching locations. Try another industry or region.','暫無匹配節點，請更換行業或地區。')}</p>`;
   }
 
   function renderIndustryCards() {
     $('industry-cards').innerHTML = industries.map((i,index) => {
       const associated = markets.filter(m => [...m.primary,...m.secondary].includes(i.id));
       const defined = associated.filter(m => !m.proposed.includes(i.id));
-      const mainNames = [...new Set(defined.map(m => m.core === 'china' ? tr('Mainland China','中国内地') : name(m)))];
-      const countText=associated.some(m=>m.proposed.includes(i.id)) ? tr(`${associated.length} locations, including proposed directions`,`${associated.length} 个关联节点，含建议方向`) : tr(`${associated.length} associated locations`,`${associated.length} 个关联节点`);
-      return `<button class="industry-card ${state.industry === i.id ? 'selected' : ''}" data-sector="${i.id}" style="--industry-color:${i.color}" aria-pressed="${state.industry === i.id}" aria-label="${tr('Explore ','探索')+name(i)}"><span class="industry-card-top"><span class="industry-icon">${icon(i.icon)}</span><span class="industry-number">0${index+1} / 06</span></span><h3>${name(i)}</h3><span class="industry-alternate">${state.lang === 'en' ? i.zh : i.en}</span><p>${i[state.lang+'Desc']}</p><span class="sector-tags">${i.tags.join(' / ')}</span><span class="industry-card-bottom"><span class="industry-locations">${mainNames.join(' · ') || tr('Proposed market directions','建议市场方向')}<br>${countText}</span><b>↗</b></span></button>`;
+      const mainNames = [...new Set(defined.map(m => m.core === 'china' ? tr('Mainland China','中國內地') : name(m)))];
+      const countText=associated.some(m=>m.proposed.includes(i.id)) ? tr(`${associated.length} locations, including proposed directions`,`${associated.length} 個關聯節點，含建議方向`) : tr(`${associated.length} associated locations`,`${associated.length} 個關聯節點`);
+      return `<button class="industry-card ${state.industry === i.id ? 'selected' : ''}" data-sector="${i.id}" style="--industry-color:${i.color}" aria-pressed="${state.industry === i.id}" aria-label="${tr('Explore ','探索')+name(i)}"><span class="industry-card-top"><span class="industry-icon">${icon(i.icon)}</span><span class="industry-number">0${index+1} / 06</span></span><h3>${name(i)}</h3><span class="industry-alternate">${state.lang === 'en' ? i.zh : i.en}</span><p>${i[state.lang+'Desc']}</p><span class="sector-tags">${i.tags.join(' / ')}</span><span class="industry-card-bottom"><span class="industry-locations">${mainNames.join(' · ') || tr('Proposed market directions','建議市場方向')}<br>${countText}</span><b>↗</b></span></button>`;
     }).join('');
   }
 
   function renderDirectory() {
-    $('directory-grid').innerHTML = markets.map(m => `<div class="directory-location"><button data-directory="${m.id}"><strong>${m.core ? '◆ ' : ''}${name(m)}</strong></button><span>${[...m.primary,...m.secondary].map(id => shortIndustry(id)+(m.proposed.includes(id) ? tr(' (proposed)','（建议）') : '')).join(' · ')}${m.subtags ? ' · '+m.subtags.join(' / ') : ''}</span><br><small>${priorityText(m)} · ${statusText(m)}</small></div>`).join('');
+    $('directory-grid').innerHTML = markets.map(m => `<div class="directory-location"><button data-directory="${m.id}"><strong>${m.core ? '◆ ' : ''}${name(m)}</strong></button><span>${[...m.primary,...m.secondary].map(id => shortIndustry(id)+(m.proposed.includes(id) ? tr(' (proposed)','（建議）') : '')).join(' · ')}${m.subtags ? ' · '+m.subtags.join(' / ') : ''}</span><br><small>${priorityText(m)} · ${statusText(m)}</small></div>`).join('');
   }
 
   const countries = topojson.feature(window.CW_WORLD,window.CW_WORLD.objects.countries).features.filter(f => f.id !== '010');
@@ -173,8 +173,8 @@
     const cc=map.append('g').attr('opacity',visibleMarkets().some(m=>m.region==='china')?1:.2).attr('aria-hidden','true');
     const lx=cluster[0]-(mobile?43:48), ly=cluster[1]-(mobile?40:59);
     cc.append('path').attr('class','china-callout-line').attr('d',`M${cluster}L${lx+20},${ly+9}H${lx-10}`);
-    cc.append('text').attr('class','china-callout').attr('x',lx-10).attr('y',ly).attr('text-anchor','middle').style('font-size',mobile?'7px':'9px').text(tr('Mainland China','中国内地'));
-    cc.append('text').attr('class','china-callout').attr('x',lx-10).attr('y',ly+12).attr('text-anchor','middle').style('font-size','7px').style('fill','#668fa1').text(tr('3 cities · detail below','3 个城市 · 见放大图'));
+    cc.append('text').attr('class','china-callout').attr('x',lx-10).attr('y',ly).attr('text-anchor','middle').style('font-size',mobile?'7px':'9px').text(tr('Mainland China','中國內地'));
+    cc.append('text').attr('class','china-callout').attr('x',lx-10).attr('y',ly+12).attr('text-anchor','middle').style('font-size','7px').style('fill','#668fa1').text(tr('3 cities · detail below','3 個城市 · 見放大圖'));
     drawChina();
   }
 
@@ -222,7 +222,7 @@
   $('language').addEventListener('click',()=>{
     state.lang=state.lang==='en'?'zh':'en';
     const url = new URL(location.href);
-    if(state.lang==='zh')url.searchParams.set('lang','zh');else url.searchParams.delete('lang');
+    if(state.lang==='en')url.searchParams.set('lang','en');else url.searchParams.delete('lang');
     history.replaceState(null,'',url);
     render();
   });

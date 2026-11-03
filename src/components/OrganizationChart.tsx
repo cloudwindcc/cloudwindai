@@ -8,16 +8,16 @@ interface OrganizationChartProps {
 export const OrganizationChart: React.FC<OrganizationChartProps> = ({ english = false }) => {
   const departments = english
     ? ['Asia Pacific Division', 'China Division', 'Marketing & Services', 'Product & Technology']
-    : ['亚太事业部', '中国区事业部', '营销及服务部', '产品及技术部'];
+    : ['亞太事業部', '中國區事業部', '營銷及服務部', '產品及技術部'];
 
   return (
     <div className="bg-gradient-to-r from-sky-900/30 to-purple-900/30 p-5 md:p-8 rounded-xl">
       <h3 className="text-xl md:text-2xl text-center mb-8 text-sky-300">
-        {english ? 'Organization Structure' : '组织架构'}
+        {english ? 'Organization Structure' : '組織架構'}
       </h3>
       <div className="max-w-sm mx-auto rounded-lg border border-sky-400/40 bg-sky-900/40 px-5 py-6 text-center shadow-lg shadow-sky-950/20">
         <Network aria-hidden="true" className="w-7 h-7 text-sky-300 mx-auto mb-3" strokeWidth={1.7} />
-        <h4 className="text-lg text-sky-100">{english ? 'CEO Office' : 'CEO办公室'}</h4>
+        <h4 className="text-lg text-sky-100">{english ? 'CEO Office' : 'CEO辦公室'}</h4>
       </div>
       <div className="h-7 w-px bg-sky-400/40 mx-auto" aria-hidden="true" />
       <div className="hidden md:block h-px bg-sky-400/40 mx-[12%]" aria-hidden="true" />
