@@ -40,13 +40,12 @@
       '以香港為公司所在地，展示未來技術合作的地理參考；其他地區均標示為拓展中或潛在合作夥伴接洽中。'
     );
     $('world-title').textContent = tr('CloudWind AI global collaboration map', 'CloudWind AI 全球合作地圖');
-    $('world-desc').textContent = tr('Map centered on Hong Kong with 15 geographic points. Hong Kong is the company base; every other point is exploring or in potential partner discussions. The list provides a text alternative.', '以香港為中心、包含十五個地理節點的地圖。香港是公司所在地，其他節點均屬拓展中或潛在合作夥伴接洽中；列表提供文字替代。');
+    $('world-desc').textContent = tr('Map centered on Hong Kong with 12 geographic points. Hong Kong is the company base; every other point is exploring or in potential partner discussions. The list provides a text alternative.', '以香港為中心、包含十二個地理節點的地圖。香港是公司所在地，其他節點均屬拓展中或潛在合作夥伴接洽中；列表提供文字替代。');
   }
 
   function renderFocusCards() {
     const focus = [
       {id:'hong-kong',en:'Hong Kong',zh:'香港'},
-      {id:'shenzhen',en:'Mainland China',zh:'中國內地'},
       {id:'singapore',en:'Singapore',zh:'新加坡'},
       {id:'philippines',en:'Philippines',zh:'菲律賓'}
     ];
@@ -59,7 +58,7 @@
   function renderControls() {
     $('region').innerHTML = regions.map(r => `<option value="${r.id}" ${r.id === state.region ? 'selected' : ''}>${name(r)}</option>`).join('');
     $('region').setAttribute('aria-label', tr('Filter by region', '按地區篩選'));
-    $('match-count').textContent = tr(`${visibleMarkets().length} of 15 locations`, `${visibleMarkets().length} / 15 個節點`);
+    $('match-count').textContent = tr(`${visibleMarkets().length} of ${markets.length} locations`, `${visibleMarkets().length} / ${markets.length} 個節點`);
     $('view-map').classList.toggle('selected', state.view === 'map');
     $('view-list').classList.toggle('selected', state.view === 'list');
     $('view-map').setAttribute('aria-pressed', String(state.view === 'map'));
@@ -76,7 +75,7 @@
     }
     const region = regions.find(r => r.id === m.region);
     $('location-detail').innerHTML = `
-      <div class="detail-top"><span class="detail-region">${name(region)}</span><span class="detail-order">${String(markets.indexOf(m)+1).padStart(2,'0')} / 15</span></div>
+      <div class="detail-top"><span class="detail-region">${name(region)}</span><span class="detail-order">${String(markets.indexOf(m)+1).padStart(2,'0')} / ${markets.length}</span></div>
       <div class="detail-location-code">${m.status === 'active' ? tr('COMPANY BASE','公司所在地') : tr('POTENTIAL LOCATION','潛在合作地區')}</div>
       <h3 id="detail-title">${name(m)}</h3>
       <div class="detail-coordinate">${state.lang === 'en' ? m.city : m.city_zh} · ${coords(m)}</div>
@@ -132,12 +131,12 @@
       .attr('aria-label',m=>`${name(m)} · ${statusText(m)}`).attr('aria-pressed',m=>state.selected===m.id)
       .on('click',(event,m)=>selectLocation(m.id))
       .on('keydown',(event,m)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectLocation(m.id);}});
-    nodes.append('circle').attr('class','node-hit').attr('r',m=>m.region==='china'&&m.id!=='hong-kong'?6:mobile?14:13);
+    nodes.append('circle').attr('class','node-hit').attr('r',mobile?14:13);
     nodes.filter(m=>m.status==='active').append('circle').attr('class','node-halo').attr('r',m=>state.selected===m.id?19:12);
-    nodes.append('circle').attr('class','node-ring').attr('r',m=>m.region==='china'&&m.id!=='hong-kong'?2.4:m.status==='active'?5:4);
+    nodes.append('circle').attr('class','node-ring').attr('r',m=>m.status==='active'?5:4);
     nodes.append('circle').attr('class','node-center').attr('r',1.4);
     const shownLabels = mobile ? ['hong-kong','philippines','japan','dubai','tonga','suriname','png']
-      : markets.filter(m=>m.region!=='china'||m.id==='hong-kong').map(m=>m.id);
+      : markets.map(m=>m.id);
     const labelNodes = nodes.filter(m=>shownLabels.includes(m.id));
     const offset = m => {
       if (mobile) return {'hong-kong':[-18,-9],philippines:[6,20],japan:[13,-23],dubai:[-18,-25],tonga:[10,20],suriname:[12,22],png:[28,6]}[m.id];
@@ -150,40 +149,6 @@
       .attr('text-anchor',m=>offset(m)[0]<0?'end':'start')
       .style('font-size',mobile?'8px':width<700?'9px':'11px')
       .text(m=>mobile&&m.id==='png'?tr('Papua New Guinea','巴新'):name(m));
-    const cluster=projection([114.15,24.0]), lx=cluster[0]-(mobile?43:48), ly=cluster[1]-(mobile?40:59);
-    const callout=map.append('g').attr('opacity',visibleMarkets().some(m=>m.region==='china')?1:.2).attr('aria-hidden','true');
-    callout.append('path').attr('class','china-callout-line').attr('d',`M${cluster}L${lx+20},${ly+9}H${lx-10}`);
-    callout.append('text').attr('class','china-callout').attr('x',lx-10).attr('y',ly).attr('text-anchor','middle')
-      .style('font-size',mobile?'7px':'9px').text(tr('Mainland China','中國內地'));
-    callout.append('text').attr('class','china-callout').attr('x',lx-10).attr('y',ly+12).attr('text-anchor','middle')
-      .style('font-size','7px').style('fill','#668fa1').text(tr('3 cities · exploring','3 個城市 · 拓展中'));
-    drawChina();
-  }
-
-  function drawChina() {
-    const element=$('china-map'), width=element.clientWidth, height=element.clientHeight;
-    const svg=d3.select(element).attr('viewBox',`0 0 ${width} ${height}`);
-    svg.selectAll('*').remove();
-    const projection=d3.geoMercator().center([117.1,26.8])
-      .scale(Math.min((width-105)/(.15),(height-46)/(.178))).translate([width/2,height/2-13]);
-    const path=d3.geoPath(projection);
-    svg.append('g').selectAll('path').data(countries.filter(f=>['156','158','704'].includes(f.id)))
-      .join('path').attr('class','land').attr('d',path);
-    const local=markets.filter(m=>m.region==='china');
-    const offsets={suzhou:[14,1],dongguan:[-25,-17],shenzhen:[32,0],'hong-kong':[12,22]};
-    const groups=svg.append('g').selectAll('g').data(local).join('g')
-      .attr('class',m=>`node ${m.status==='active'?'core':m.status==='partner'?'partner':'exploring'} ${state.selected===m.id?'selected':''} ${isVisible(m)?'':'hidden-node'}`)
-      .attr('transform',m=>`translate(${projection([m.lon,m.lat])})`)
-      .attr('data-inset-location',m=>m.id).attr('role','button').attr('tabindex',m=>isVisible(m)?0:-1)
-      .attr('aria-label',m=>`${name(m)} · ${statusText(m)}`)
-      .on('click',(event,m)=>selectLocation(m.id))
-      .on('keydown',(event,m)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectLocation(m.id);}});
-    groups.append('path').attr('class','label-line').attr('d',m=>{const [x,y]=offsets[m.id];return `M0,0L${x*.6},${y}H${x}`;});
-    groups.append('circle').attr('class','node-ring').attr('r',2.6);
-    groups.append('text').attr('class','node-label').attr('x',m=>offsets[m.id][0]+(offsets[m.id][0]<0?-3:3))
-      .attr('y',m=>offsets[m.id][1]+3).attr('text-anchor',m=>offsets[m.id][0]<0?'end':'start').text(name);
-    groups.append('rect').attr('fill','transparent').attr('x',m=>offsets[m.id][0]-(offsets[m.id][0]<0?48:4))
-      .attr('y',m=>offsets[m.id][1]-12).attr('width',62).attr('height',23);
   }
 
   function selectLocation(id) {
@@ -201,7 +166,7 @@
     const loc=event.target.closest('[data-location]');
     const directory=event.target.closest('[data-directory]');
     if (focus) {
-      state.region=focus.dataset.focus==='shenzhen'?'china':'all';
+      state.region='all';
       state.selected=focus.dataset.focus;
       state.view='map';render();$('network').scrollIntoView({block:'start'});
     }

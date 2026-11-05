@@ -3,7 +3,7 @@
 window.CW_DATA = {
   regions: [
     {id:'all', en:'All regions', zh:'全部地區'},
-    {id:'china', en:'Hong Kong & Mainland China', zh:'香港及中國內地'},
+    {id:'hk', en:'Hong Kong', zh:'香港'},
     {id:'sea', en:'Southeast Asia', zh:'東南亞'},
     {id:'pacific', en:'Oceania & Pacific', zh:'大洋洲及太平洋'},
     {id:'east', en:'East Asia', zh:'東亞'},
@@ -11,10 +11,7 @@ window.CW_DATA = {
     {id:'middleeast', en:'Middle East', zh:'中東'}
   ],
   markets: [
-    {id:'hong-kong',en:'Hong Kong',zh:'香港',city:'Hong Kong',city_zh:'香港',lat:22.27832,lon:114.17469,region:'china',status:'active',core:'hk',label:[-40,7]},
-    {id:'shenzhen',en:'Shenzhen',zh:'深圳',city:'Shenzhen',city_zh:'深圳',lat:22.54554,lon:114.06830,region:'china',status:'exploring',label:[0,0]},
-    {id:'suzhou',en:'Suzhou',zh:'蘇州',city:'Suzhou',city_zh:'蘇州',lat:31.30408,lon:120.59538,region:'china',status:'exploring',label:[0,0]},
-    {id:'dongguan',en:'Dongguan',zh:'東莞',city:'Dongguan',city_zh:'東莞',lat:23.01797,lon:113.74866,region:'china',status:'exploring',label:[0,0]},
+    {id:'hong-kong',en:'Hong Kong',zh:'香港',city:'Hong Kong',city_zh:'香港',lat:22.27832,lon:114.17469,region:'hk',status:'active',core:'hk',label:[-40,7]},
     {id:'singapore',en:'Singapore',zh:'新加坡',city:'Singapore',city_zh:'新加坡',lat:1.28967,lon:103.85007,region:'sea',status:'exploring',label:[-72,69]},
     {id:'philippines',en:'Philippines',zh:'菲律賓',city:'Manila',city_zh:'馬尼拉',lat:14.6042,lon:120.9822,region:'sea',status:'partner',label:[30,19]},
     {id:'malaysia',en:'Malaysia',zh:'馬來西亞',city:'Kuala Lumpur',city_zh:'吉隆坡',lat:3.1412,lon:101.68653,region:'sea',status:'exploring',label:[-105,28]},
