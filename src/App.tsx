@@ -14,7 +14,7 @@ import { ContactEN } from './components/ContactEN';
 import { TestimonialsEN } from './components/TestimonialsEN';
 import { ParticleNetwork } from './components/ParticleNetwork';
 
-// A full-page visit from Global Presence arrives before the React sections mount.
+// A full-page visit from the global map arrives before the React sections mount.
 function ScrollToSection() {
   const { pathname, hash } = useLocation();
 

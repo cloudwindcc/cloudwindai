@@ -47,7 +47,7 @@ export const NavigationEN: React.FC = () => {
           <Link to="/en" className="hover:text-sky-400 transition-colors">Home</Link> {/* Use Link */}
           <a href="#services" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#services')}>Services</a>
           <a href="#about" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#about')}>About Us</a>
-          <a href="/global?lang=en" className="hover:text-sky-400 transition-colors">International Collaboration</a>
+          <a href="/global?lang=en" className="hover:text-sky-400 transition-colors">Global Map</a>
           <a href="/cases?lang=en" className="hover:text-sky-400 transition-colors">Client Cases</a>
           <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="bg-sky-600 hover:bg-sky-500 text-white px-3 py-2 rounded-md text-sm">Explore Products ↗</a>
           <a href="#contact" className="hover:text-sky-400 transition-colors" onClick={(e) => handleNavLinkClick(e, '#contact')}>Contact</a>
@@ -71,7 +71,7 @@ export const NavigationEN: React.FC = () => {
         <Link to="/en" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>Home</Link> {/* Use Link */}
         <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#services')}>Services</a>
         <a href="#about" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#about')}>About Us</a>
-        <a href="/global?lang=en" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>International Collaboration</a>
+        <a href="/global?lang=en" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={() => setMobileMenuOpen(false)}>Global Map</a>
         <a href="/cases?lang=en" className="block px-4 py-2 text-white hover:bg-gray-700">Client Cases</a>
         <a href="https://www.cloudwind.ai" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sky-300 hover:bg-gray-700">Explore Products ↗</a>
         <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-700" onClick={(e) => handleNavLinkClick(e, '#contact')}>Contact</a>
