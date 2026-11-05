@@ -17,15 +17,9 @@ export const ContactEN: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, you would send the form data to your backend
-    console.log('Form submitted:', formData);
-    alert('Message sent! We will contact you as soon as possible.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    const subject = encodeURIComponent(`Website enquiry: ${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}\n\nName: ${formData.name}\nEmail: ${formData.email}`);
+    window.location.href = `mailto:info@cloudwindai.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -93,7 +87,7 @@ export const ContactEN: React.FC = () => {
             onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1d4ed8'}
             onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2563eb'}
           >
-            Send Message
+            Contact by Email
           </button>
         </form>
       </div>

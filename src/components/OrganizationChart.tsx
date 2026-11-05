@@ -7,8 +7,8 @@ interface OrganizationChartProps {
 
 export const OrganizationChart: React.FC<OrganizationChartProps> = ({ english = false }) => {
   const departments = english
-    ? ['Asia Pacific Division', 'China Division', 'Marketing & Services', 'Product & Technology']
-    : ['亞太事業部', '中國區事業部', '營銷及服務部', '產品及技術部'];
+    ? ['Project Delivery', 'Marketing & Services', 'Product & Technology']
+    : ['項目交付部', '營銷及服務部', '產品及技術部'];
 
   return (
     <div className="bg-gradient-to-r from-sky-900/30 to-purple-900/30 p-5 md:p-8 rounded-xl">
@@ -21,7 +21,7 @@ export const OrganizationChart: React.FC<OrganizationChartProps> = ({ english = 
       </div>
       <div className="h-7 w-px bg-sky-400/40 mx-auto" aria-hidden="true" />
       <div className="hidden md:block h-px bg-sky-400/40 mx-[12%]" aria-hidden="true" />
-      <div className="grid gap-3 md:grid-cols-4 md:gap-5">
+      <div className="grid gap-3 md:grid-cols-3 md:gap-5">
         {departments.map((department) => (
           <div key={department} className="min-w-0">
             <div className="hidden md:block h-7 w-px bg-sky-400/40 mx-auto" aria-hidden="true" />

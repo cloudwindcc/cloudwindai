@@ -1,78 +1,24 @@
 import React from 'react';
 import { OrganizationChart } from './OrganizationChart';
 
-export const About: React.FC = () => {
-  const stats = [
-    { label: 'AI 項目經驗', value: '50+', desc: '成功交付案例' },
-    { label: '客戶滿意度', value: '98%', desc: '持續合作率' },
-    { label: '平均 ROI', value: '300%', desc: '投資回報倍數' },
-    { label: '交付週期', value: '30天', desc: '標準交付時間' },
-  ];
-
-  return (
-    <section id="about" className="content-section" style={{
-      padding: '6rem 2rem',
-      maxWidth: '1200px',
-      margin: '0 auto',
-      position: 'relative',
-      zIndex: 1,
-      backgroundColor: 'rgba(10, 15, 31, 0.7)',
-      borderRadius: '8px',
-      marginTop: '2rem',
-      marginBottom: '2rem'
-    }}>
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-300">關於雲風智能</h2>
-        <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          香港 AI 解決方案與企業增長顧問，專注為傳統企業提供可落地的智能轉型支持。
-        </p>
+export const About: React.FC = () => (
+  <section id="about" className="content-section" style={{ padding: '6rem 2rem', maxWidth: '1200px', margin: '2rem auto', position: 'relative', zIndex: 1, backgroundColor: 'rgba(10, 15, 31, 0.7)', borderRadius: '8px' }}>
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-300">關於雲風智能</h2>
+      <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">雲風智能有限公司成立於香港，專注 AI 應用、企業流程工具與數字產品開發。</p>
+    </div>
+    <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <div className="bg-gray-800/50 p-8 rounded-lg">
+        <h3 className="text-xl md:text-2xl font-bold text-sky-400 mb-4">我們的工作</h3>
+        <p className="text-sm md:text-base text-gray-300 leading-relaxed">我們與團隊釐清實際工作場景，設計可使用的 AI 工具、網站和自動化流程，並按項目範圍提供開發及維護支持。</p>
       </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-        {stats.map((stat) => (
-          <div key={stat.label} className="text-center p-6 bg-sky-900/20 rounded-lg border border-sky-500/20">
-            <div className="text-2xl md:text-3xl font-bold text-sky-400 mb-2">{stat.value}</div>
-            <div className="text-sm text-sky-300 mb-1">{stat.label}</div>
-            <div className="text-xs text-gray-400">{stat.desc}</div>
-          </div>
-        ))}
+      <div className="bg-gray-800/50 p-8 rounded-lg">
+        <h3 className="text-xl md:text-2xl font-bold text-sky-400 mb-4">合作方式</h3>
+        <ul className="space-y-3 text-sm md:text-base text-gray-300">
+          <li>• 需求訪談與業務流程梳理</li><li>• 原型設計與功能驗證</li><li>• 網站、應用與智能體開發</li><li>• 上線後維護與迭代</li>
+        </ul>
       </div>
-
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-gray-800/50 p-8 rounded-lg">
-          <h3 className="text-xl md:text-2xl font-bold text-sky-400 mb-4">我們的使命</h3>
-          <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-4">
-            雲風智能有限公司（CloudWind AI Limited）成立於香港，專注為傳統企業提供 AI 降本增效、營運自動化與財務顧問解決方案。
-          </p>
-          <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-            我們相信 AI 技術不只是工具，而是企業重構效率、收入與資本價值的底層能力。
-          </p>
-        </div>
-
-        <div className="bg-gray-800/50 p-8 rounded-lg">
-          <h3 className="text-xl md:text-2xl font-bold text-sky-400 mb-4">核心優勢</h3>
-          <ul className="space-y-3 text-sm md:text-base text-gray-300">
-            <li className="flex items-start">
-              <span className="text-sky-400 mr-2">•</span>
-              <span><strong>行業專家：</strong>團隊具備 AI、諮詢與企業服務經驗</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-sky-400 mr-2">•</span>
-              <span><strong>快速交付：</strong>30 天標準流程，原型先行</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-sky-400 mr-2">•</span>
-              <span><strong>效果可衡量：</strong>以效率、收入與資本溝通成果作為交付目標</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-sky-400 mr-2">•</span>
-              <span><strong>持續支持：</strong>提供長期維護、流程優化與顧問支持</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <OrganizationChart />
-    </section>
-  );
-};
+    </div>
+    <OrganizationChart />
+  </section>
+);

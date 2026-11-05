@@ -6,7 +6,7 @@ export const Services: React.FC = () => {
       title: 'AI 智能營銷套件',
       english: 'AI Marketing Suite',
       description:
-        '一站式 AI 營銷解決方案：智能網站生成、社交媒體內容創作、品牌故事策劃與營銷數據分析，協助企業降低獲客成本並提升品牌表達效率。',
+        '網站及數字內容工具的設計與開發，涵蓋品牌內容、網站體驗和營銷數據整理。',
       features: ['AI 網站/App 生成', '內容引擎', '品牌故事策劃', '營銷數據分析'],
       price: '10,000 HKD 起',
       icon: '🚀',
@@ -15,7 +15,7 @@ export const Services: React.FC = () => {
       title: 'AI 營運與智能體助手',
       english: 'AI Operations & Agents',
       description:
-        '將營運優化與智能體定製合併為統一產品：覆蓋 AI 輔助開發、智能客服、流程自動化、法務/財務/業務助手，減少重複工作並提升內部協作效率。',
+        '為內部知識檢索、客戶支援及日常流程建立智能體和自動化工具，減少重複操作。',
       features: ['AI 輔助開發', '智能客服與 Agent', '流程自動化', '崗位助手定製'],
       price: '按場景評估',
       icon: '⚙️',
@@ -24,19 +24,19 @@ export const Services: React.FC = () => {
       title: 'AI 戰略決策引擎',
       english: 'AI Strategy Engine',
       description:
-        '基於企業私有數據構建知識庫與決策模型，提供經營洞察、業務分析和戰略規劃輔助，讓管理層更快做出高質量判斷。',
+        '基於企業資料建立知識庫、數據面板及分析工具，協助團隊整理資訊與支援營運規劃。',
       features: ['私有知識庫', '決策支持模型', '商業洞察分析', '戰略規劃輔助'],
       price: '500 HKD/小時起',
       icon: '🎯',
     },
     {
-      title: '財務諮詢與融資顧問',
-      english: 'Financial Advisory',
+      title: '網站與應用開發',
+      english: 'Web & App Development',
       description:
-        '面向成長型企業的財務顧問服務：梳理商業模式、搭建財務模型、設計融資方案，協助企業準備投資人溝通材料並提升融資效率。',
-      features: ['財務模型搭建', '融資方案設計', '估值與股權規劃', '投資人材料準備'],
+        '按需求設計企業網站、內容平台及網絡應用，提供原型、前端開發與後續維護。',
+      features: ['企業網站', '內容平台', '應用原型', '維護與迭代'],
       price: '按項目評估',
-      icon: '💼',
+      icon: '🧩',
     },
   ];
 
@@ -61,7 +61,7 @@ export const Services: React.FC = () => {
           核心業務
         </h2>
         <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-          四個清晰模組，覆蓋 AI 落地、營運效率、戰略決策和資本規劃，為企業提供可執行、可衡量的增長支持。
+          聚焦 AI 工具、營運流程、數據分析與數字產品，按項目需求確定交付範圍。
         </p>
       </div>
 
@@ -124,25 +124,12 @@ export const Services: React.FC = () => {
       <div className="text-center mt-12">
         <div className="bg-gradient-to-r from-sky-600 to-purple-600 p-6 rounded-lg max-w-2xl mx-auto">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-            30 天標準交付承諾
+            從需求到交付
           </h3>
           <p className="text-sm md:text-base text-gray-200 mb-4">
-            固定週期 · 固定價格 · 原型先行 · 效果可測
+            需求溝通 · 方案設計 · 原型驗證 · 開發迭代
           </p>
-          <div className="flex justify-center gap-8 text-white">
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold">60%+</div>
-              <div className="text-sm">獲客成本降低</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold">40%+</div>
-              <div className="text-sm">營運效率提升</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold">300%+</div>
-              <div className="text-sm">投資回報率</div>
-            </div>
-          </div>
+          <a href="#contact" className="inline-block text-white underline underline-offset-4">討論項目需求 ↗</a>
         </div>
       </div>
     </section>

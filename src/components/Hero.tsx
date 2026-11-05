@@ -5,13 +5,13 @@ export const Hero: React.FC = () => {
     { title: 'AI 落地', desc: '從場景拆解到原型交付' },
     { title: '營運自動化', desc: '以智能體承接重複流程' },
     { title: '戰略決策', desc: '把數據轉化為管理判斷' },
-    { title: '財務顧問', desc: '提升融資與資本溝通效率' },
+    { title: '數字產品', desc: '設計與開發網站及企業應用' },
   ];
 
   const metrics = [
     { value: '4', label: '核心業務模組' },
-    { value: '30天', label: '標準交付週期' },
-    { value: '60%+', label: '獲客成本優化目標' },
+    { value: 'AI', label: '智能工具與工作流程' },
+    { value: '香港', label: '公司所在地' },
   ];
 
   return (
@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
 
             <p className="text-base md:text-xl text-gray-300 max-w-2xl mb-9 leading-relaxed">
               雲風智能為傳統企業提供 AI
-              落地、營運自動化、戰略決策與財務顧問服務，讓智能真正轉化為效率、收入與資本價值。
+              落地、營運自動化、數據分析與數字產品開發服務，協助團隊改善工作流程與數字體驗。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -113,7 +113,7 @@ export const Hero: React.FC = () => {
 
               <div className="mt-8 rounded-lg bg-sky-400/10 border border-sky-300/20 p-5">
                 <p className="text-sm md:text-base text-gray-200 leading-relaxed">
-                  適合正在尋找 AI 轉型、營運提效、融資準備與企業增長顧問支持的中小型及成長型企業。
+                  適合希望建立 AI 工具、優化內部流程及開發數字產品的企業團隊。
                 </p>
               </div>
             </div>

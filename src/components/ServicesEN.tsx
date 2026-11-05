@@ -5,7 +5,7 @@ export const ServicesEN: React.FC = () => {
     {
       title: 'AI Marketing Suite',
       description:
-        'One-stop AI marketing support for websites, social content, brand storytelling, and marketing data analysis, helping enterprises reduce acquisition costs and improve brand execution.',
+        'Design and development of websites and digital content tools, including brand content, web experiences and marketing data organisation.',
       features: ['Website/App Generation', 'Content Engine', 'Brand Story Planning', 'Marketing Analytics'],
       price: 'From $1,280 USD',
       icon: '🚀',
@@ -13,7 +13,7 @@ export const ServicesEN: React.FC = () => {
     {
       title: 'AI Operations & Agent Automation',
       description:
-        'A unified product combining operations optimization and custom AI agents: AI-assisted development, intelligent customer service, workflow automation, and role-specific assistants.',
+        'AI agents and automation tools for internal knowledge, customer support and routine workflows.',
       features: ['AI-Assisted Development', 'Service Agents', 'Workflow Automation', 'Role Assistants'],
       price: 'Scenario-based Quote',
       icon: '⚙️',
@@ -21,18 +21,18 @@ export const ServicesEN: React.FC = () => {
     {
       title: 'AI Strategic Decision Engine',
       description:
-        'Build private knowledge bases and decision models from enterprise data, providing business insights, operating analysis, and strategic planning support for management teams.',
+        'Build knowledge bases, dashboards and analysis tools from business data to support information management and operational planning.',
       features: ['Private Knowledge Base', 'Decision Models', 'Business Insight Analysis', 'Strategic Planning'],
       price: 'From $65 USD/hour',
       icon: '🎯',
     },
     {
-      title: 'Financial Consulting & Advisory',
+      title: 'Website & App Development',
       description:
-        'Financial advisory services for growing companies: business model review, financial modeling, financing strategy, valuation planning, and investor material preparation.',
-      features: ['Financial Modeling', 'Financing Strategy', 'Valuation Planning', 'Investor Materials'],
+        'Design and build corporate websites, content platforms and web applications, from prototypes to ongoing maintenance.',
+      features: ['Corporate Websites', 'Content Platforms', 'App Prototypes', 'Maintenance & Iteration'],
       price: 'Project-based Quote',
-      icon: '💼',
+      icon: '🧩',
     },
   ];
 
@@ -57,7 +57,7 @@ export const ServicesEN: React.FC = () => {
           Core Services
         </h2>
         <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-          Four focused service modules across AI implementation, operating efficiency, strategic decisions, and capital planning
+          AI tools, operational workflows, data analysis and digital products, scoped to each project.
         </p>
       </div>
 
@@ -105,9 +105,9 @@ export const ServicesEN: React.FC = () => {
               <span className="text-base font-bold text-green-400">
                 {service.price}
               </span>
-              <button className="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300">
+              <a href="#contact" className="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300">
                 Consult Now
-              </button>
+              </a>
             </div>
           </div>
         ))}
@@ -116,25 +116,12 @@ export const ServicesEN: React.FC = () => {
       <div className="text-center mt-12">
         <div className="bg-gradient-to-r from-sky-600 to-purple-600 p-6 rounded-lg max-w-2xl mx-auto">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-            30-Day Standard Delivery Commitment
+            From Brief to Delivery
           </h3>
           <p className="text-sm md:text-base text-gray-200 mb-4">
-            Fixed Cycle · Fixed Price · Prototype First · Measurable Results
+            Discovery · Solution Design · Prototype · Development
           </p>
-          <div className="flex justify-center gap-8 text-white">
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold">60%+</div>
-              <div className="text-sm">Customer Acquisition Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold">40%+</div>
-              <div className="text-sm">Operational Efficiency Improvement</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold">300%+</div>
-              <div className="text-sm">Return on Investment</div>
-            </div>
-          </div>
+          <a href="#contact" className="inline-block text-white underline underline-offset-4">Discuss a Project ↗</a>
         </div>
       </div>
     </section>

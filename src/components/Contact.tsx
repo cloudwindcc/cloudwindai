@@ -17,13 +17,9 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('訊息已送出，我們將盡快與您聯絡。');
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    const subject = encodeURIComponent(`網站諮詢：${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}\n\n聯絡人：${formData.name}\n郵箱：${formData.email}`);
+    window.location.href = `mailto:info@cloudwindai.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -88,7 +84,7 @@ export const Contact: React.FC = () => {
             type="submit"
             className="w-full bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg text-sm px-5 py-3 text-center transition-colors"
           >
-            發送訊息
+            使用電郵聯絡
           </button>
         </form>
       </div>

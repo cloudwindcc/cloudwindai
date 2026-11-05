@@ -5,13 +5,13 @@ export const HeroEN: React.FC = () => {
     { title: 'AI Implementation', desc: 'From use-case design to working prototypes' },
     { title: 'Operations Automation', desc: 'Agent workflows for repeated internal work' },
     { title: 'Strategic Decisions', desc: 'Turn business data into clearer judgment' },
-    { title: 'Financial Advisory', desc: 'Improve fundraising and capital communication' },
+    { title: 'Digital Products', desc: 'Design and build websites and business applications' },
   ];
 
   const metrics = [
     { value: '4', label: 'Core service modules' },
-    { value: '30 Days', label: 'Standard delivery cycle' },
-    { value: '60%+', label: 'Acquisition cost target' },
+    { value: 'AI', label: 'Tools and workflows' },
+    { value: 'Hong Kong', label: 'Company location' },
   ];
 
   return (
@@ -45,7 +45,7 @@ export const HeroEN: React.FC = () => {
             </h1>
 
             <p className="text-base md:text-xl text-gray-300 max-w-2xl mb-9 leading-relaxed">
-              CloudWind AI helps traditional enterprises implement AI, automate operations, improve strategic decisions, and strengthen financial advisory outcomes.
+              CloudWind AI helps businesses implement AI, automate operations, analyse data and build digital products for practical day-to-day use.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -112,7 +112,7 @@ export const HeroEN: React.FC = () => {
 
               <div className="mt-8 rounded-lg bg-sky-400/10 border border-sky-300/20 p-5">
                 <p className="text-sm md:text-base text-gray-200 leading-relaxed">
-                  Built for growing companies preparing AI transformation, operational efficiency, fundraising readiness, and enterprise growth advisory.
+                  For teams looking to build AI tools, improve internal workflows and develop digital products.
                 </p>
               </div>
             </div>
